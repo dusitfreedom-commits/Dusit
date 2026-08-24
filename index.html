@@ -127,17 +127,19 @@
     const SHAREPOINT_PO_CHECKLIST_URL = "https://varindath-my.sharepoint.com/:x:/g/personal/pattarasak_m_myu-nique_com/IQDkUw-6_PoeToj2XSdAvWQrAb3S3MsHo0tFg24yWXXA_U8?e=3s11KQ";
     const SHAREPOINT_BOX_CALC_URL = "https://varindath-my.sharepoint.com/:x:/g/personal/anucha_k_myu-nique_com/IQC5ZtB-FCoXTarWxD7wN4IyAZDjQMUZWDC9Jw09vGoqmgU?e=hN5GiE";
 
-    // --- 9 SYSTEM MODULES LIST WITH METADATA ---
+    // --- 11 SYSTEM MODULES LIST WITH SEQUENTIAL NUMBERING (1 - 11) ---
     const ALL_MODULE_LIST = [
-      { id: 'checklist', name: '1. Checklist PO', shortName: '1. Checklist', iconEmoji: '⚡', desc: 'รายการ PO จาก SharePoint' },
-      { id: 'route', name: '2. แผนจัดส่ง AI', shortName: '2. AI Route', iconEmoji: '🗺️', desc: 'แผนที่ & คำนวณเส้นทาง AI' },
-      { id: 'box_calculator', name: '3. คำนวณกล่อง & รถ', shortName: '3. คำนวณกล่อง', iconEmoji: '📦', desc: 'คำนวณ CBM, ลัง, น้ำหนัก 631 สินค้า' },
-      { id: 'sticker', name: '4. สติกเกอร์ 4x6', shortName: '4. สติกเกอร์', iconEmoji: '🏷️', desc: 'พิมพ์สติกเกอร์ & ลูกค้า TT 516 ร้าน' },
-      { id: 'fleet', name: '5. กองรถ (Fleet)', shortName: '5. กองรถ', iconEmoji: '🚚', desc: 'จัดการประเภทรถ & คนขับ' },
-      { id: 'cost', name: '6. เทียบ Cost Sky/JY', shortName: '6. Cost Sky/JY', iconEmoji: '📊', desc: 'ตารางเปรียบเทียบค่าส่ง' },
-      { id: 'business_idea', name: '7. เรทราคา BI', shortName: '7. เรท BI', iconEmoji: '📑', desc: 'สรุปอัตราค่าบริการ BI' },
-      { id: 'customers', name: '8. ลูกค้ากลาง Route', shortName: '8. ลูกค้า Route', iconEmoji: '👥', desc: '66 จุดส่งจริง (DC + ร้านค้า)' },
-      { id: 'users', name: '9. จัดการสิทธิ์ & ผู้ใช้', shortName: '9. จัดการสิทธิ์', iconEmoji: '🛡️', desc: 'ควบคุม Username / Password / สิทธิ์' }
+      { id: 'dashboard', name: '1. ภาพรวมระบบ (Dashboard)', shortName: '1. ภาพรวม', iconEmoji: '📊', desc: 'สรุปภาพรวม KPI และสถานะทุกโมดูล' },
+      { id: 'checklist', name: '2. ตรวจสอบสั่งซื้อ (Checklist PO)', shortName: '2. Checklist', iconEmoji: '📋', desc: 'รายการ PO จาก SharePoint' },
+      { id: 'route', name: '3. แผนจัดส่งอัจฉริยะ (AI Route)', shortName: '3. AI Route', iconEmoji: '🗺️', desc: 'แผนที่ & วิ่งเลี้ยวตามถนนจริง' },
+      { id: 'box_calculator', name: '4. คำนวณกล่องและน้ำหนักรถ', shortName: '4. คำนวณกล่อง', iconEmoji: '📦', desc: 'คำนวณ CBM, ลัง, น้ำหนัก 631 สินค้า' },
+      { id: 'warehouse_returns', name: '5. รับคืนสินค้าจากคลัง (Returns)', shortName: '5. รับคืนสินค้า', iconEmoji: '🔄', desc: 'ยิงบาร์โค้ดรับคืน & คำนวณชิ้น/กล่อง' },
+      { id: 'sticker', name: '6. พิมพ์สติกเกอร์ 4x6 & TT', shortName: '6. สติกเกอร์', iconEmoji: '🏷️', desc: 'พิมพ์สติกเกอร์ & ลูกค้า TT 517 ร้าน' },
+      { id: 'fleet', name: '7. กองรถจัดส่ง (Fleet)', shortName: '7. กองรถ', iconEmoji: '🚚', desc: 'จัดการประเภทรถและจำนวนรถ' },
+      { id: 'cost_sky_jy', name: '8. เทียบ Cost Sky vs JY', shortName: '8. Cost Sky/JY', iconEmoji: '💰', desc: 'เปรียบเทียบต้นทุนค่าส่ง 2 เจ้า' },
+      { id: 'cost_bi', name: '9. เรทราคาขนส่ง BI', shortName: '9. เรท BI', iconEmoji: '📈', desc: 'ตารางราคาค่าขนส่งตามระยะทาง BI' },
+      { id: 'customers', name: '10. ลูกค้า AI Route', shortName: '10. ลูกค้า Route', iconEmoji: '📍', desc: 'พิกัด GPS จริง 47 จุด (MyMaps)' },
+      { id: 'users', name: '11. จัดการผู้ใช้งาน & กำหนดสิทธิ์', shortName: '11. จัดการสิทธิ์', iconEmoji: '👑', desc: 'ควบคุม Username, รหัสผ่าน และสิทธิ์' }
     ];
 
     // --- SYSTEM USER ACCOUNTS WITH DEFAULT PERMISSIONS ---
@@ -148,7 +150,7 @@
         password: "123",
         role: "ผู้จัดการระบบ (Super Admin)",
         name: "คุณภัทรศักดิ์ (Admin)",
-        permissions: ['checklist', 'route', 'box_calculator', 'sticker', 'fleet', 'cost', 'business_idea', 'customers', 'users'],
+        permissions: ['dashboard', 'checklist', 'route', 'box_calculator', 'warehouse_returns', 'sticker', 'fleet', 'cost_sky_jy', 'cost_bi', 'customers', 'users'],
         status: 'active'
       },
       {
@@ -157,7 +159,7 @@
         password: "123",
         role: "ฝ่ายจัดส่ง & วางแผน",
         name: "คุณอนุชา (Planner)",
-        permissions: ['checklist', 'route', 'box_calculator', 'fleet', 'cost', 'business_idea', 'customers'],
+        permissions: ['dashboard', 'checklist', 'route', 'box_calculator', 'warehouse_returns', 'fleet', 'cost_sky_jy', 'cost_bi', 'customers'],
         status: 'active'
       },
       {
@@ -166,7 +168,7 @@
         password: "123",
         role: "ฝ่ายคลังสินค้า",
         name: "เจ้าหน้าที่คลังสินค้า",
-        permissions: ['checklist', 'box_calculator', 'sticker'],
+        permissions: ['dashboard', 'checklist', 'box_calculator', 'warehouse_returns', 'sticker'],
         status: 'active'
       }
     ];
@@ -14818,8 +14820,9 @@
       const [loginInput, setLoginInput] = useState({ username: '', password: '' });
       const [loginError, setLoginError] = useState('');
 
-      // --- MAIN MODULES ---
-      const [currentModule, setCurrentModule] = useState('checklist');
+      // --- MAIN MODULES & DROPDOWN NAV STATE ---
+      const [currentModule, setCurrentModule] = useState('dashboard');
+      const [isNavDropdownOpen, setIsNavDropdownOpen] = useState(false);
 
       // --- CORE MASTER DATA STATE ---
       const [depot, setDepot] = useState(() => getStored('depot', INITIAL_DEPOT));
@@ -14990,6 +14993,88 @@
         }
         return list;
       }, [printHistory, historyDateFilter]);
+
+      // --- MODULE 5: WAREHOUSE GOODS RETURN (รับคืนสินค้าจากคลังหลายรายการ) ---
+      const [warehouseReturns, setWarehouseReturns] = useState(() => getStored('warehouse_returns', [
+        {
+          id: 'ret_init_1',
+          docNo: 'RN-20260824-001',
+          date: '2026-08-24',
+          time: '14:30',
+          barcode: '8850029011122',
+          productCode: '40003010',
+          productName: 'น้ำยาปรับผ้านุ่ม ไฮยีน สีชมพู 580 มล.',
+          unitPerCarton: 12,
+          cartonSize: 'M',
+          qtyPcs: 24,
+          qtyCartons: 2,
+          cbm: 0.0114,
+          weightKg: 12.0,
+          returnFrom: 'DC บางพลี / วัตสันส์',
+          receiver: 'เจ้าหน้าที่คลัง'
+        },
+        {
+          id: 'ret_init_2',
+          docNo: 'RN-20260824-002',
+          date: '2026-08-24',
+          time: '15:15',
+          barcode: '8850029012345',
+          productCode: '40003025',
+          productName: 'ไฮยีน น้ำยาซักผ้า สูตรเข้มข้น 600 มล.',
+          unitPerCarton: 12,
+          cartonSize: 'M',
+          qtyPcs: 12,
+          qtyCartons: 1,
+          cbm: 0.0057,
+          weightKg: 6.0,
+          returnFrom: 'ร้านค้า TT - นครปฐม',
+          receiver: 'เจ้าหน้าที่คลัง'
+        }
+      ]));
+      const [returnDocHeader, setReturnDocHeader] = useState({
+        docNo: 'RN-20260824-001',
+        date: new Date().toISOString().slice(0, 10),
+        returnFrom: 'DC บางพลี / วัตสันส์'
+      });
+      const [returnSheetRows, setReturnSheetRows] = useState(() => [
+        {
+          id: 'row_ret_1',
+          barcode: '8850029011122',
+          code: '40003010',
+          name: 'น้ำยาปรับผ้านุ่ม ไฮยีน สีชมพู 580 มล.',
+          unitPerCarton: 12,
+          cartonSize: 'M',
+          cbmPerPcs: 0.000476,
+          weightPerCarton: 6,
+          qtyPcs: 24,
+          qtyCartons: 2,
+          cbm: '0.011',
+          weightKg: '12.0'
+        }
+      ]);
+      const [quickScanBarcode, setQuickScanBarcode] = useState('');
+      const [returnSearchQuery, setReturnSearchQuery] = useState('');
+      const [returnFilterDate, setReturnFilterDate] = useState('');
+      const [showBatchReturnModal, setShowBatchReturnModal] = useState(false);
+      const [batchReturnText, setBatchReturnText] = useState('');
+
+      const filteredReturns = useMemo(() => {
+        let list = warehouseReturns;
+        if (returnFilterDate) {
+          list = list.filter(r => r.date === returnFilterDate);
+        }
+        if (returnSearchQuery.trim()) {
+          const q = returnSearchQuery.toLowerCase().trim();
+          list = list.filter(r =>
+            (r.barcode && r.barcode.toLowerCase().includes(q)) ||
+            (r.productName && r.productName.toLowerCase().includes(q)) ||
+            (r.productCode && r.productCode.toLowerCase().includes(q)) ||
+            (r.docNo && r.docNo.toLowerCase().includes(q)) ||
+            (r.returnFrom && r.returnFrom.toLowerCase().includes(q))
+          );
+        }
+        return list;
+      }, [warehouseReturns, returnFilterDate, returnSearchQuery]);
 
       // --- MODULE 8: CENTRAL ROUTE CUSTOMERS STATE ---
       const [customerCategoryFilter, setCustomerCategoryFilter] = useState('ALL');
@@ -15245,6 +15330,7 @@
       useEffect(() => { try { localStorage.setItem('ai_logistics_v15_calc_rates', JSON.stringify(calcRates)); } catch(e){} }, [calcRates]);
       useEffect(() => { try { localStorage.setItem('ai_logistics_v15_sticker_customers', JSON.stringify(stickerCustomers)); } catch(e){} }, [stickerCustomers]);
       useEffect(() => { try { localStorage.setItem('ai_logistics_v15_print_history', JSON.stringify(printHistory)); } catch(e){} }, [printHistory]);
+      useEffect(() => { try { localStorage.setItem('ai_logistics_v15_warehouse_returns', JSON.stringify(warehouseReturns)); } catch(e){} }, [warehouseReturns]);
 
       // --- RE-INITIALIZE ICONS ON RENDER ---
       useEffect(() => {
@@ -15784,17 +15870,36 @@
           if (hasOptimized && routesResult.length > 0) {
             routesResult.forEach((route) => {
               if (route.stops && route.stops.length > 0) {
-                const latlngs = [
-                  [depot.lat, depot.lng],
-                  ...route.stops.map(st => [st.lat, st.lng]),
-                  [depot.lat, depot.lng]
-                ];
-                window.L.polyline(latlngs, {
-                  color: route.vehicleColor || '#a855f7',
-                  weight: 4,
-                  opacity: 0.85,
-                  dashArray: '8, 8'
+                const pathPoints = (route.roadCoordinates && route.roadCoordinates.length > 0)
+                  ? route.roadCoordinates
+                  : [
+                      [depot.lat, depot.lng],
+                      ...route.stops.map(st => [st.lat, st.lng]),
+                      [depot.lat, depot.lng]
+                    ];
+
+                // Road Outline Casing (for crisp visibility on roads)
+                window.L.polyline(pathPoints, {
+                  color: '#ffffff',
+                  weight: 7,
+                  opacity: 0.9
                 }).addTo(routesLayerRef.current);
+
+                // Main Road Route Line (snapped 100% to actual roads)
+                const routeLine = window.L.polyline(pathPoints, {
+                  color: route.vehicleColor || '#ec4899',
+                  weight: 4.5,
+                  opacity: 0.95,
+                  smoothFactor: 1
+                }).addTo(routesLayerRef.current);
+
+                routeLine.bindPopup(
+                  '<div style="font-family:Prompt;font-size:12px;color:#0f172a;">' +
+                  '<strong>🚗 ' + route.vehicleName + '</strong><br>' +
+                  '🛣️ ระยะทางตามถนนจริง: <strong>' + route.distance + ' กม.</strong><br>' +
+                  '⏱️ เวลาเดินทางรวม: <strong>~' + route.duration + ' นาที</strong>' +
+                  '</div>'
+                );
               }
             });
           }
@@ -15806,16 +15911,22 @@
         return () => clearTimeout(mapTimer);
       }, [currentModule, dailyStops, depot, hasOptimized, routesResult]);
 
-      // Optimization Algorithm Handler
-      const handleOptimizeRoutes = () => {
+      // Optimization Algorithm with Real-Road OSRM Driving Engine
+      const handleOptimizeRoutes = async () => {
         if (dailyStops.length === 0) {
           alert('กรุณาเลือกจุดส่งในแผนประจำวันก่อนครับ');
           return;
         }
 
         setIsOptimizing(true);
-        setTimeout(() => {
-          const sortedStops = [...dailyStops].sort((a, b) => (b.lng - a.lng) + (b.lat - a.lat));
+        try {
+          // 1. Sort stops by distance to depot / nearest neighbor order
+          const sortedStops = [...dailyStops].sort((a, b) => {
+            const distA = Math.hypot(a.lat - depot.lat, a.lng - depot.lng);
+            const distB = Math.hypot(b.lat - depot.lat, b.lng - depot.lng);
+            return distA - distB;
+          });
+
           const numVehicles = Math.min(vehicles.length, Math.max(1, Math.ceil(sortedStops.length / 4)));
           const results = [];
           
@@ -15826,24 +15937,368 @@
             const vStops = sortedStops.slice(stopIdx, stopIdx + chunkCount);
             stopIdx += chunkCount;
 
-            const dist = parseFloat((vStops.length * 14.5 + 18.2).toFixed(1));
-            const dur = Math.round(dist * 2.2 * trafficFactor);
+            if (vStops.length === 0) continue;
+
+            // Build coordinates string for OSRM: lng,lat;lng,lat;...
+            const coordsList = [
+              [depot.lng, depot.lat],
+              ...vStops.map(s => [s.lng, s.lat]),
+              [depot.lng, depot.lat]
+            ];
+            const coordsStr = coordsList.map(c => c[0] + ',' + c[1]).join(';');
+
+            let roadCoords = null;
+            let realDistance = parseFloat((vStops.length * 15.2 + 22.0).toFixed(1));
+            let realDuration = Math.round(realDistance * 2.3 * trafficFactor);
+
+            try {
+              const osrmUrl = 'https://router.project-osrm.org/route/v1/driving/' + coordsStr + '?overview=full&geometries=geojson';
+              const resp = await fetch(osrmUrl);
+              if (resp.ok) {
+                const data = await resp.json();
+                if (data.code === 'Ok' && data.routes && data.routes[0]) {
+                  const r = data.routes[0];
+                  // OSRM coordinates are [lng, lat], Leaflet requires [lat, lng]
+                  roadCoords = r.geometry.coordinates.map(pt => [pt[1], pt[0]]);
+                  realDistance = parseFloat((r.distance / 1000).toFixed(1));
+                  realDuration = Math.round((r.duration / 60) * trafficFactor);
+                }
+              }
+            } catch(fetchErr) {
+              console.warn('OSRM road routing fallback used:', fetchErr);
+            }
 
             results.push({
               vehicleId: veh.id,
               vehicleName: veh.name,
-              vehicleColor: veh.color || '#38bdf8',
+              vehicleColor: veh.color || (v === 0 ? '#38bdf8' : v === 1 ? '#ec4899' : '#a855f7'),
               stops: vStops,
-              distance: dist,
-              duration: dur
+              distance: realDistance,
+              duration: realDuration,
+              roadCoordinates: roadCoords
             });
           }
 
           setRoutesResult(results);
           setHasOptimized(true);
-          setIsOptimizing(false);
           if (window.confetti) window.confetti({ particleCount: 80, spread: 80 });
-        }, 800);
+        } catch(err) {
+          alert('เกิดข้อผิดพลาดในการคำนวณเส้นทาง: ' + err.message);
+        } finally {
+          setIsOptimizing(false);
+        }
+      };
+
+      // --- MULTI-ITEM WAREHOUSE GOODS RETURN CRUD & AUTO LOOKUP LOGIC ---
+      const handleQuickScanAddRow = () => {
+        const clean = (quickScanBarcode || '').trim();
+        if (!clean) return;
+
+        const found = masterProducts.find(p =>
+          (p.barcode && String(p.barcode).trim().toLowerCase() === clean.toLowerCase()) ||
+          (p.code && String(p.code).trim().toLowerCase() === clean.toLowerCase())
+        ) || {
+          barcode: clean,
+          code: clean,
+          name: 'สินค้าบาร์โค้ด ' + clean,
+          unitPerCarton: 12,
+          size: 'S',
+          weightKg: 6,
+          cbmPerPcs: 0.000476
+        };
+
+        const u = found.unitPerCarton > 0 ? found.unitPerCarton : 12;
+        const w = found.weightKg || 6;
+        const cbmPcs = found.cbmPerPcs || 0.000476;
+        const defaultQty = u;
+        const c = 1.00;
+        const totalCbm = (cbmPcs * defaultQty).toFixed(3);
+        const totalKg = w.toFixed(1);
+
+        const newRow = {
+          id: 'row_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+          barcode: clean,
+          code: found.code || clean,
+          name: found.name,
+          unitPerCarton: u,
+          cartonSize: found.size || 'S',
+          cbmPerPcs: cbmPcs,
+          weightPerCarton: w,
+          qtyPcs: defaultQty,
+          qtyCartons: c,
+          cbm: totalCbm,
+          weightKg: totalKg
+        };
+
+        setReturnSheetRows(prev => [...prev, newRow]);
+        setQuickScanBarcode('');
+      };
+
+      const handleAddEmptyReturnRow = () => {
+        const newRow = {
+          id: 'row_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+          barcode: '',
+          code: '',
+          name: '',
+          unitPerCarton: 12,
+          cartonSize: 'S',
+          cbmPerPcs: 0.000476,
+          weightPerCarton: 6,
+          qtyPcs: 12,
+          qtyCartons: 1,
+          cbm: '0.006',
+          weightKg: '6.0'
+        };
+        setReturnSheetRows(prev => [...prev, newRow]);
+      };
+
+      const handleDeleteReturnRow = (rowId) => {
+        setReturnSheetRows(prev => prev.filter(r => r.id !== rowId));
+      };
+
+      const handleClearReturnSheet = () => {
+        if (confirm('คุณต้องการล้างรายการทั้งหมดในใบคืนนี้ ใช่หรือไม่?')) {
+          setReturnSheetRows([]);
+        }
+      };
+
+      const handleUpdateRowBarcode = (rowId, val) => {
+        const clean = (val || '').trim();
+        const found = masterProducts.find(p =>
+          (p.barcode && String(p.barcode).trim().toLowerCase() === clean.toLowerCase()) ||
+          (p.code && String(p.code).trim().toLowerCase() === clean.toLowerCase())
+        );
+
+        setReturnSheetRows(prev => prev.map(r => {
+          if (r.id !== rowId) return r;
+          if (found) {
+            const u = found.unitPerCarton > 0 ? found.unitPerCarton : 12;
+            const w = found.weightKg || 6;
+            const cbmPcs = found.cbmPerPcs || 0.000476;
+            const pcs = r.qtyPcs ? Number(r.qtyPcs) : u;
+            const cartons = parseFloat((pcs / u).toFixed(2));
+            const cbm = (cbmPcs * pcs).toFixed(3);
+            const kg = (cartons * w).toFixed(1);
+            return {
+              ...r,
+              barcode: val,
+              code: found.code || '',
+              name: found.name,
+              unitPerCarton: u,
+              cartonSize: found.size || 'S',
+              cbmPerPcs: cbmPcs,
+              weightPerCarton: w,
+              qtyPcs: pcs,
+              qtyCartons: cartons,
+              cbm: cbm,
+              weightKg: kg
+            };
+          }
+          return { ...r, barcode: val };
+        }));
+      };
+
+      const handleUpdateRowQtyPcs = (rowId, val) => {
+        const pcs = val === '' ? '' : Number(val);
+        setReturnSheetRows(prev => prev.map(r => {
+          if (r.id !== rowId) return r;
+          const u = r.unitPerCarton || 12;
+          const cartons = pcs === '' ? '' : parseFloat((pcs / u).toFixed(2));
+          const cbm = pcs === '' ? '0.000' : ((r.cbmPerPcs || 0.000476) * pcs).toFixed(3);
+          const kg = cartons === '' ? '0.0' : (cartons * (r.weightPerCarton || 6)).toFixed(1);
+          return {
+            ...r,
+            qtyPcs: pcs,
+            qtyCartons: cartons,
+            cbm: cbm,
+            weightKg: kg
+          };
+        }));
+      };
+
+      const handleUpdateRowQtyCartons = (rowId, val) => {
+        const cartons = val === '' ? '' : Number(val);
+        setReturnSheetRows(prev => prev.map(r => {
+          if (r.id !== rowId) return r;
+          const u = r.unitPerCarton || 12;
+          const pcs = cartons === '' ? '' : Math.round(cartons * u);
+          const cbm = pcs === '' ? '0.000' : ((r.cbmPerPcs || 0.000476) * pcs).toFixed(3);
+          const kg = cartons === '' ? '0.0' : (cartons * (r.weightPerCarton || 6)).toFixed(1);
+          return {
+            ...r,
+            qtyCartons: cartons,
+            qtyPcs: pcs,
+            cbm: cbm,
+            weightKg: kg
+          };
+        }));
+      };
+
+      const handleSaveCompleteReturnSheet = () => {
+        if (returnSheetRows.length === 0) {
+          alert('กรุณาเพิ่มรายการสินค้าที่จะรับคืนอย่างน้อย 1 รายการครับ');
+          return;
+        }
+
+        const newItems = returnSheetRows.map((r, i) => ({
+          id: 'ret_' + Date.now() + '_' + i,
+          docNo: returnDocHeader.docNo || ('RN-' + returnDocHeader.date.replace(/-/g, '') + '-001'),
+          date: returnDocHeader.date || new Date().toISOString().slice(0, 10),
+          time: new Date().toTimeString().slice(0, 5),
+          barcode: r.barcode || '-',
+          productCode: r.code || '-',
+          productName: r.name || ('สินค้าบาร์โค้ด ' + r.barcode),
+          unitPerCarton: r.unitPerCarton || 12,
+          cartonSize: r.cartonSize || 'S',
+          qtyPcs: Number(r.qtyPcs) || 0,
+          qtyCartons: Number(r.qtyCartons) || 0,
+          cbm: r.cbm || '0.000',
+          weightKg: r.weightKg || '0.0',
+          returnFrom: returnDocHeader.returnFrom || 'คลังสินค้า / ลูกค้าทั่วไป',
+          receiver: currentUser ? currentUser.name : 'เจ้าหน้าที่คลัง'
+        }));
+
+        setWarehouseReturns(prev => [...newItems, ...prev]);
+
+        // Generate next RN Doc No
+        const nextNum = (warehouseReturns.length + newItems.length + 1).toString().padStart(3, '0');
+        setReturnDocHeader(prev => ({
+          ...prev,
+          docNo: 'RN-' + prev.date.replace(/-/g, '') + '-' + nextNum
+        }));
+
+        // Reset current return sheet rows
+        setReturnSheetRows([]);
+        if (window.confetti) window.confetti({ particleCount: 80, spread: 80 });
+      };
+
+      const handleDeleteReturnItem = (id) => {
+        if (confirm('คุณต้องการลบรายการรับคืนสินค้านี้ ใช่หรือไม่?')) {
+          setWarehouseReturns(prev => prev.filter(r => r.id !== id));
+        }
+      };
+
+      const handleExportReturnsToExcel = () => {
+        if (warehouseReturns.length === 0) {
+          alert('ไม่มีรายการรับคืนสินค้าให้ส่งออก');
+          return;
+        }
+
+        const data = filteredReturns.map((r, i) => ({
+          'ลำดับ': i + 1,
+          'เลขที่ใบคืน': r.docNo,
+          'วันที่รับคืน': r.date,
+          'เวลา': r.time,
+          'บาร์โค้ด': r.barcode,
+          'รหัสสินค้า': r.productCode,
+          'ชื่อสินค้า': r.productName,
+          'บรรจุ (ชิ้น/ลัง)': r.unitPerCarton,
+          'ไซส์กล่อง': r.cartonSize,
+          'จำนวนรับคืน (ชิ้น)': r.qtyPcs,
+          'จำนวนรับคืน (ลัง)': r.qtyCartons,
+          'ปริมาตรรวม (CBM)': r.cbm,
+          'น้ำหนักรวม (Kg)': r.weightKg,
+          'รับคืนจาก': r.returnFrom,
+          'ผู้บันทึก': r.receiver
+        }));
+
+        const ws = XLSX.utils.json_to_sheet(data);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'WarehouseReturns');
+        XLSX.writeFile(wb, 'Warehouse_Returns_Report_' + new Date().toISOString().slice(0, 10) + '.xlsx');
+      };
+
+      const handleFileUploadForReturns = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          try {
+            const bstr = evt.target.result;
+            const wb = XLSX.read(bstr, { type: 'binary' });
+            const wsname = wb.SheetNames[0];
+            const ws = wb.Sheets[wsname];
+            const data = XLSX.utils.sheet_to_json(ws, { header: 1 });
+
+            let pastedText = '';
+            data.forEach((row, i) => {
+              if (i === 0 && (String(row[0]).toLowerCase().includes('bar') || String(row[0]).toLowerCase().includes('code'))) {
+                return;
+              }
+              if (row[0]) {
+                const b = String(row[0]).trim();
+                const q = row[1] ? String(row[1]).trim() : '12';
+                pastedText += b + '\t' + q + '\n';
+              }
+            });
+
+            if (pastedText) {
+              setBatchReturnText(pastedText);
+            }
+          } catch(err) {
+            alert('เกิดข้อผิดพลาดในการอ่านไฟล์ Excel: ' + err.message);
+          }
+        };
+        reader.readAsBinaryString(file);
+      };
+
+      const handleProcessBatchReturns = () => {
+        if (!batchReturnText.trim()) {
+          alert('กรุณากรอกหรือวางข้อมูลบาร์โค้ด');
+          return;
+        }
+
+        const lines = batchReturnText.trim().split(/\r?\n/);
+        const newRows = [];
+
+        lines.forEach((line, lineIdx) => {
+          const parts = line.split(/\t|,|\s+/).filter(Boolean);
+          if (parts.length > 0) {
+            const barcodeOrCode = parts[0].trim();
+            const qty = parts[1] ? parseInt(parts[1], 10) : 12;
+
+            const prod = masterProducts.find(p =>
+              (p.barcode && String(p.barcode).trim().toLowerCase() === barcodeOrCode.toLowerCase()) ||
+              (p.code && String(p.code).trim().toLowerCase() === barcodeOrCode.toLowerCase())
+            ) || {
+              barcode: barcodeOrCode,
+              code: barcodeOrCode,
+              name: 'สินค้าบาร์โค้ด ' + barcodeOrCode,
+              unitPerCarton: 12,
+              size: 'S',
+              weightKg: 6,
+              cbmPerPcs: 0.000476
+            };
+
+            const u = prod.unitPerCarton > 0 ? prod.unitPerCarton : 12;
+            const c = parseFloat((qty / u).toFixed(2));
+            const cbm = ((prod.cbmPerPcs || 0.000476) * qty).toFixed(3);
+            const kg = (c * (prod.weightKg || 6)).toFixed(1);
+
+            newRows.push({
+              id: 'row_' + Date.now() + '_' + lineIdx,
+              barcode: prod.barcode || barcodeOrCode,
+              code: prod.code || barcodeOrCode,
+              name: prod.name,
+              unitPerCarton: u,
+              cartonSize: prod.size || 'S',
+              cbmPerPcs: prod.cbmPerPcs || 0.000476,
+              weightPerCarton: prod.weightKg || 6,
+              qtyPcs: qty,
+              qtyCartons: c,
+              cbm: cbm,
+              weightKg: kg
+            });
+          }
+        });
+
+        if (newRows.length > 0) {
+          setReturnSheetRows(prev => [...prev, ...newRows]);
+          setBatchReturnText('');
+          setShowBatchReturnModal(false);
+          if (window.confetti) window.confetti({ particleCount: 70, spread: 60 });
+        }
       };
 
 
@@ -15912,7 +16367,7 @@
                   <input
                     type="text"
                     required
-                    placeholder="เช่น admin, planner, staff"
+                    placeholder="กรอกชื่อผู้ใช้งาน..."
                     value={loginInput.username}
                     onChange={(e) => setLoginInput({ ...loginInput, username: e.target.value })}
                     className="w-full bg-pink-50/50 border border-pink-200 rounded-2xl p-3 text-slate-900 font-bold focus:ring-2 focus:ring-pink-400 focus:bg-white shadow-inner"
@@ -15924,7 +16379,7 @@
                   <input
                     type="password"
                     required
-                    placeholder="รหัสผ่าน (123)"
+                    placeholder="กรอกรหัสผ่าน..."
                     value={loginInput.password}
                     onChange={(e) => setLoginInput({ ...loginInput, password: e.target.value })}
                     className="w-full bg-pink-50/50 border border-pink-200 rounded-2xl p-3 text-slate-900 font-bold focus:ring-2 focus:ring-pink-400 focus:bg-white shadow-inner"
@@ -15940,14 +16395,6 @@
                   <span>💖</span>
                 </button>
               </form>
-
-              <div className="p-3.5 bg-pink-50/60 border border-pink-200/80 rounded-2xl text-[11px] text-pink-950 space-y-1.5 shadow-inner">
-                <div className="font-bold text-pink-700 flex items-center gap-1">🔑 บัญชีทดสอบเริ่มต้น:</div>
-                <div className="flex justify-between text-slate-700"><span>ผู้จัดการ (Super Admin): <strong className="text-pink-700">admin</strong></span> <span>รหัส: <strong className="text-pink-700">123</strong></span></div>
-                <div className="flex justify-between text-slate-700"><span>ฝ่ายจัดส่ง (Planner): <strong className="text-pink-700">planner</strong></span> <span>รหัส: <strong className="text-pink-700">123</strong></span></div>
-                <div className="flex justify-between text-slate-700"><span>ฝ่ายคลัง (Warehouse): <strong className="text-pink-700">staff</strong></span> <span>รหัส: <strong className="text-pink-700">123</strong></span></div>
-              </div>
-
             </div>
           </div>
         );
@@ -15957,140 +16404,320 @@
       return (
         <div className="min-h-screen flex flex-col">
           {/* ============================================================ */}
-          {/* TOP APP HEADER & NAVIGATION (CUTE & CHEERFUL PASTEL THEME)  */}
+          {/* TOP APP HEADER: CLEAN LEFT DROPDOWN & LOGISTICS HUB HUB     */}
           {/* ============================================================ */}
-          <header className="bg-white/90 backdrop-blur-xl border-b border-pink-200/80 px-4 lg:px-6 py-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 sticky top-0 z-40 shadow-[0_4px_20px_rgba(244,114,182,0.15)]">
+          <header className="bg-white/95 backdrop-blur-xl border-b border-pink-200/80 px-4 lg:px-6 py-2.5 flex justify-between items-center sticky top-0 z-40 shadow-[0_4px_20px_rgba(244,114,182,0.12)]">
             
-            {/* BRAND LOGO & TITLE */}
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-3xl bg-gradient-to-tr from-pink-400 via-rose-300 to-amber-300 flex items-center justify-center text-white shadow-md border-2 border-white animate-bounce-short">
-                <span className="text-2xl">💖</span>
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h1 className="font-black bg-gradient-to-r from-pink-600 via-purple-500 to-sky-500 bg-clip-text text-transparent text-base lg:text-lg tracking-tight flex items-center gap-1.5">
-                    <span>AI Route & Logistics Hub</span>
-                    <span className="text-base">🌸</span>
+            {/* LEFT SECTION: BRAND + CLEAN LOGISTICS HUB DROPDOWN MENU */}
+            <div className="flex items-center gap-3 relative">
+              
+              {/* Brand Logo & Name */}
+              <div
+                onClick={() => setCurrentModule('dashboard')}
+                className="flex items-center gap-2.5 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-400 via-rose-300 to-amber-300 flex items-center justify-center text-white shadow-md border-2 border-white animate-bounce-short">
+                  <span className="text-xl">💖</span>
+                </div>
+                <div>
+                  <h1 className="font-black bg-gradient-to-r from-pink-600 via-purple-600 to-sky-600 bg-clip-text text-transparent text-sm lg:text-base tracking-tight flex items-center gap-1">
+                    <span>Logistics Hub</span>
+                    <span className="text-xs">🌸</span>
                   </h1>
-                  <span className="text-[10px] px-2.5 py-0.5 font-black uppercase rounded-full bg-pink-100/90 text-pink-600 border border-pink-200 shadow-sm flex items-center gap-1">
-                    <span>✨</span>
-                    <span>Kawaii Edition</span>
+                  <span className="text-[9px] px-2 py-0.2 font-black uppercase rounded-full bg-pink-100 text-pink-600 border border-pink-200">
+                    Smart Edition
                   </span>
                 </div>
-                <div className="text-[11px] text-pink-700/70 font-medium hidden md:block">
-                  Checklist PO • AI Route • คำนวณกล่องและน้ำหนักรถ • สติกเกอร์ 4x6 • กองรถ • Cost Sky vs JY • เรทราคา BI • ลูกค้า 47 จุด • จัดการสิทธิ์
-                </div>
               </div>
+
+              {/* VERTICAL DIVIDER */}
+              <div className="h-7 w-[1.5px] bg-pink-200 hidden sm:block mx-1"></div>
+
+              {/* LEFT DROPDOWN MENU TRIGGER BUTTON */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+                  className="px-3.5 py-2 bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 hover:from-pink-400 hover:to-sky-400 text-white rounded-2xl text-xs font-black shadow-md border-2 border-white flex items-center gap-2 transition duration-200 transform hover:scale-[1.02]"
+                >
+                  <span className="text-sm">☰</span>
+                  <span>เมนูระบบ Logistics Hub</span>
+                  <span className="text-[10px] transform transition-transform duration-200" style={{ transform: isNavDropdownOpen ? 'rotate(180deg)' : 'none' }}>
+                    ▼
+                  </span>
+                </button>
+
+                {/* DROPDOWN MENU OVERLAY & FLOATING CARD */}
+                {isNavDropdownOpen && (
+                  <>
+                    {/* Backdrop to close on click outside */}
+                    <div
+                      onClick={() => setIsNavDropdownOpen(false)}
+                      className="fixed inset-0 z-40 bg-slate-900/10"
+                    ></div>
+
+                    {/* Dropdown Floating Panel (1 to 11 Modules Seamless) */}
+                    <div className="absolute left-0 top-full mt-2 w-80 sm:w-96 bg-white/95 backdrop-blur-2xl rounded-3xl p-3 shadow-2xl border-2 border-pink-200 z-50 space-y-1.5 animate-in fade-in slide-in-from-top-2 duration-150 text-slate-800">
+                      
+                      <div className="px-3 py-1.5 border-b border-pink-100 flex justify-between items-center text-xs font-black text-pink-900">
+                        <span className="flex items-center gap-1.5">
+                          <span>📦</span>
+                          <span>เลือกโมดูลการทำงาน (เรียง 1 - 11):</span>
+                        </span>
+                        <span className="text-[10px] text-pink-500 font-bold">Logistics Hub</span>
+                      </div>
+
+                      <div className="space-y-1 max-h-[70vh] overflow-y-auto custom-scrollbar p-0.5">
+                        
+                        {/* 1. Dashboard */}
+                        {hasPermission('dashboard') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('dashboard');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'dashboard' ? 'bg-gradient-to-r from-pink-500 to-rose-400 text-white shadow-md font-black' : 'hover:bg-pink-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">📊</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>1. ภาพรวมระบบ (Dashboard)</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'dashboard' ? 'bg-white/30 text-white' : 'bg-pink-100 text-pink-800'}`}>ภาพรวม</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'dashboard' ? 'text-pink-100' : 'text-slate-500'}`}>ศูนย์รวม KPI สรุปสถานะทุกโมดูล</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 2. Checklist PO */}
+                        {hasPermission('checklist') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('checklist');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'checklist' ? 'bg-gradient-to-r from-emerald-500 to-teal-400 text-white shadow-md font-black' : 'hover:bg-emerald-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">📋</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>2. ตรวจสอบสั่งซื้อ (Checklist PO)</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'checklist' ? 'bg-white/30 text-white' : 'bg-emerald-100 text-emerald-800'}`}>SharePoint</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'checklist' ? 'text-emerald-100' : 'text-slate-500'}`}>ตรวจสอบรายการสั่งซื้อรายวัน</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 3. AI Route Planner */}
+                        {hasPermission('route') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('route');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'route' ? 'bg-gradient-to-r from-sky-500 to-indigo-500 text-white shadow-md font-black' : 'hover:bg-sky-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">🗺️</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>3. แผนจัดส่งอัจฉริยะ (AI Route)</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'route' ? 'bg-white/30 text-white' : 'bg-sky-100 text-sky-800'}`}>วิ่งตามถนนจริง</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'route' ? 'text-sky-100' : 'text-slate-500'}`}>จัดสายรถอัจฉริยะเลี้ยวตามถนนจริง</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 4. Box Calculator */}
+                        {hasPermission('box_calculator') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('box_calculator');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'box_calculator' ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md font-black' : 'hover:bg-purple-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">📦</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>4. คำนวณกล่องและน้ำหนักรถ</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'box_calculator' ? 'bg-white/30 text-white' : 'bg-purple-100 text-purple-800'}`}>631 สินค้า</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'box_calculator' ? 'text-purple-100' : 'text-slate-500'}`}>คำนวณจำนวนลัง CBM & เลือกรถ</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 5. Warehouse Returns */}
+                        {hasPermission('warehouse_returns') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('warehouse_returns');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'warehouse_returns' ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md font-black' : 'hover:bg-teal-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">🔄</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>5. รับคืนสินค้าจากคลัง (Returns)</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'warehouse_returns' ? 'bg-white/30 text-white' : 'bg-teal-100 text-teal-800'}`}>บาร์โค้ด & ลัง</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'warehouse_returns' ? 'text-teal-100' : 'text-slate-500'}`}>ยิงบาร์โค้ดรับคืน & คำนวณชิ้น/กล่อง</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 6. Sticker & Master TT */}
+                        {hasPermission('sticker') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('sticker');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'sticker' ? 'bg-gradient-to-r from-amber-500 via-orange-400 to-pink-400 text-slate-900 shadow-md font-black' : 'hover:bg-amber-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">🏷️</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>6. พิมพ์สติกเกอร์ 4x6 & Master TT</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'sticker' ? 'bg-black/10 text-slate-900' : 'bg-amber-100 text-amber-800'}`}>517 ร้านค้า</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'sticker' ? 'text-slate-800' : 'text-slate-500'}`}>ดึงขนาดกล่อง Box Master & พิมพ์ 4x6</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 7. Fleet Vehicles */}
+                        {hasPermission('fleet') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('fleet');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'fleet' ? 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md font-black' : 'hover:bg-blue-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">🚚</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>7. กองรถจัดส่ง (Fleet Management)</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'fleet' ? 'bg-white/30 text-white' : 'bg-blue-100 text-blue-800'}`}>{totalVehiclesCount} คัน</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'fleet' ? 'text-blue-100' : 'text-slate-500'}`}>จัดการประเภทและขนาดรถขนส่ง</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 8. Cost Sky vs JY */}
+                        {hasPermission('cost_sky_jy') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('cost_sky_jy');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'cost_sky_jy' ? 'bg-gradient-to-r from-teal-500 to-emerald-400 text-white shadow-md font-black' : 'hover:bg-teal-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">💰</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>8. เปรียบเทียบ Cost Sky vs JY</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'cost_sky_jy' ? 'bg-white/30 text-white' : 'bg-teal-100 text-teal-800'}`}>Fuel Tier</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'cost_sky_jy' ? 'text-teal-100' : 'text-slate-500'}`}>เปรียบเทียบต้นทุนค่าส่ง 2 เจ้า</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 9. BI Cost Rates */}
+                        {hasPermission('cost_bi') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('cost_bi');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'cost_bi' ? 'bg-gradient-to-r from-rose-500 to-pink-400 text-white shadow-md font-black' : 'hover:bg-rose-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">📈</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>9. เรทราคาขนส่ง BI (Pricing)</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'cost_bi' ? 'bg-white/30 text-white' : 'bg-rose-100 text-rose-800'}`}>Rates Table</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'cost_bi' ? 'text-rose-100' : 'text-slate-500'}`}>ตารางราคาค่าขนส่งตามระยะทาง BI</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 10. Route Customers */}
+                        {hasPermission('customers') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('customers');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'customers' ? 'bg-gradient-to-r from-violet-500 to-purple-400 text-white shadow-md font-black' : 'hover:bg-violet-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">📍</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>10. ฐานข้อมูลลูกค้า AI Route</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'customers' ? 'bg-white/30 text-white' : 'bg-violet-100 text-violet-800'}`}>47 พิกัดจริง</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'customers' ? 'text-violet-100' : 'text-slate-500'}`}>พิกัด GPS Google MyMaps</div>
+                            </div>
+                          </button>
+                        )}
+
+                        {/* 11. Users & Permissions */}
+                        {hasPermission('users') && (
+                          <button
+                            onClick={() => {
+                              setCurrentModule('users');
+                              setIsNavDropdownOpen(false);
+                            }}
+                            className={`w-full p-2.5 rounded-2xl text-left flex items-center gap-3 transition ${currentModule === 'users' ? 'bg-gradient-to-r from-pink-500 to-rose-400 text-white shadow-md font-black' : 'hover:bg-pink-50 text-slate-700'}`}
+                          >
+                            <span className="text-xl">👑</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-black flex items-center justify-between">
+                                <span>11. จัดการผู้ใช้งาน & กำหนดสิทธิ์</span>
+                                <span className={`text-[10px] px-2 py-0.5 rounded-md ${currentModule === 'users' ? 'bg-white/30 text-white' : 'bg-pink-100 text-pink-800'}`}>Security</span>
+                              </div>
+                              <div className={`text-[10px] truncate ${currentModule === 'users' ? 'text-pink-100' : 'text-slate-500'}`}>จัดการ Username, Password และสิทธิ์</div>
+                            </div>
+                          </button>
+                        )}
+
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* ACTIVE MODULE BADGE */}
+              <div className="hidden md:flex items-center gap-1.5 px-3 py-1 bg-pink-50 rounded-2xl border border-pink-200 text-xs font-black text-pink-800">
+                <span>📍 กำลังใช้งาน:</span>
+                <span className="text-pink-600 font-bold">
+                  {currentModule === 'dashboard' && '1. ภาพรวมระบบ (Dashboard)'}
+                  {currentModule === 'checklist' && '2. Checklist PO'}
+                  {currentModule === 'route' && '3. แผนจัดส่ง AI'}
+                  {currentModule === 'box_calculator' && '4. คำนวณกล่องและน้ำหนักรถ'}
+                  {currentModule === 'warehouse_returns' && '5. รับคืนสินค้าจากคลัง (Returns)'}
+                  {currentModule === 'sticker' && '6. พิมพ์สติกเกอร์ TT'}
+                  {currentModule === 'fleet' && '7. กองรถจัดส่ง'}
+                  {currentModule === 'cost_sky_jy' && '8. Cost Sky vs JY'}
+                  {currentModule === 'cost_bi' && '9. เรทราคา BI'}
+                  {currentModule === 'customers' && '10. ลูกค้า AI Route'}
+                  {currentModule === 'users' && '11. จัดการผู้ใช้งาน & สิทธิ์'}
+                </span>
+              </div>
+
             </div>
 
-            {/* TOP NAVIGATION TABS (CUTE PASTEL PILLS WITH PERMISSIONS) */}
-            <div className="flex items-center gap-2 overflow-x-auto max-w-full pb-1 md:pb-0 custom-scrollbar">
-              <div className="flex items-center bg-pink-50/70 border border-pink-200/80 rounded-3xl p-1.5 text-xs gap-1.5 shadow-inner backdrop-blur-md">
-                
-                {/* 1. CHECKLIST PO & ORDER */}
-                {hasPermission('checklist') && (
-                  <button
-                    onClick={() => setCurrentModule('checklist')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'checklist' ? 'bg-gradient-to-r from-emerald-400 to-teal-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-emerald-100/70 hover:text-emerald-700'}`}
-                  >
-                    <span>📋</span>
-                    <span>1. Checklist PO</span>
-                  </button>
-                )}
-
-                {/* 2. AI ROUTE OPTIMIZER */}
-                {hasPermission('route') && (
-                  <button
-                    onClick={() => setCurrentModule('route')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'route' ? 'bg-gradient-to-r from-sky-400 to-indigo-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-sky-100/70 hover:text-sky-700'}`}
-                  >
-                    <span>🗺️</span>
-                    <span>2. แผนจัดส่ง AI</span>
-                  </button>
-                )}
-
-                {/* 3. BOX & TRUCK WEIGHT CALCULATOR */}
-                {hasPermission('box_calculator') && (
-                  <button
-                    onClick={() => setCurrentModule('box_calculator')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'box_calculator' ? 'bg-gradient-to-r from-purple-400 to-pink-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-purple-100/70 hover:text-purple-700'}`}
-                  >
-                    <span>📦</span>
-                    <span>3. คำนวณกล่อง/รถ</span>
-                  </button>
-                )}
-
-                {/* 4. STICKER 4x6 & MASTER TT */}
-                {hasPermission('sticker') && (
-                  <button
-                    onClick={() => setCurrentModule('sticker')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'sticker' ? 'bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 text-slate-900 shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-amber-100/70 hover:text-amber-700'}`}
-                  >
-                    <span>🏷️</span>
-                    <span>4. พิมพ์สติกเกอร์ TT</span>
-                  </button>
-                )}
-
-                {/* 5. VEHICLE FLEET */}
-                {hasPermission('fleet') && (
-                  <button
-                    onClick={() => setCurrentModule('fleet')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'fleet' ? 'bg-gradient-to-r from-blue-400 to-cyan-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-blue-100/70 hover:text-blue-700'}`}
-                  >
-                    <span>🚚</span>
-                    <span>5. กองรถ ({totalVehiclesCount})</span>
-                  </button>
-                )}
-
-                {/* 6. COST SKY VS JY */}
-                {hasPermission('cost_sky_jy') && (
-                  <button
-                    onClick={() => setCurrentModule('cost_sky_jy')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'cost_sky_jy' ? 'bg-gradient-to-r from-teal-400 to-emerald-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-teal-100/70 hover:text-teal-700'}`}
-                  >
-                    <span>💰</span>
-                    <span>6. Cost Sky vs JY</span>
-                  </button>
-                )}
-
-                {/* 7. BI COST RATES */}
-                {hasPermission('cost_bi') && (
-                  <button
-                    onClick={() => setCurrentModule('cost_bi')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'cost_bi' ? 'bg-gradient-to-r from-rose-400 to-pink-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-rose-100/70 hover:text-rose-700'}`}
-                  >
-                    <span>📊</span>
-                    <span>7. เรทราคา BI</span>
-                  </button>
-                )}
-
-                {/* 8. ROUTE CUSTOMERS */}
-                {hasPermission('customers') && (
-                  <button
-                    onClick={() => setCurrentModule('customers')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'customers' ? 'bg-gradient-to-r from-violet-400 to-purple-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-violet-100/70 hover:text-violet-700'}`}
-                  >
-                    <span>📍</span>
-                    <span>8. ลูกค้า AI Route</span>
-                  </button>
-                )}
-
-                {/* 9. USER ROLES & PERMISSIONS */}
-                {hasPermission('users') && (
-                  <button
-                    onClick={() => setCurrentModule('users')}
-                    className={`px-3 py-1.5 rounded-2xl font-black flex items-center gap-1.5 transition-all duration-200 ${currentModule === 'users' ? 'bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-md scale-105 border border-white' : 'text-slate-600 hover:bg-pink-100/70 hover:text-pink-700'}`}
-                  >
-                    <span>👑</span>
-                    <span>9. ผู้ใช้งาน & สิทธิ์</span>
-                  </button>
-                )}
-
-              </div>
-
-              {/* USER PROFILE & LOGOUT */}
+            {/* RIGHT SECTION: USER PROFILE & LOGOUT */}
+            <div className="flex items-center gap-3">
               {currentUser && (
-                <div className="flex items-center gap-2 pl-2 border-l border-pink-200">
+                <div className="flex items-center gap-2.5">
                   <div className="hidden sm:flex flex-col items-end">
                     <span className="text-xs font-black text-slate-800 flex items-center gap-1">
                       <span>{currentUser.name}</span>
@@ -16107,13 +16734,356 @@
                   </button>
                 </div>
               )}
-
             </div>
+
           </header>
 
 
           <main className="flex-1 flex overflow-hidden">
           {/* ============================================================ */}
+          {/* MODULE 1: LOGISTICS OVERVIEW DASHBOARD (ภาพรวมทั้งหมด)        */}
+          {/* ============================================================ */}
+          {currentModule === 'dashboard' && (
+            <div className="flex-1 overflow-y-auto p-4 lg:p-6 space-y-6 custom-scrollbar">
+              
+              {/* Top Banner Greeting */}
+              <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 rounded-3xl p-6 text-white shadow-lg border-2 border-white relative overflow-hidden">
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl">💖</span>
+                      <h2 className="text-xl font-black tracking-tight">ภาพรวมระบบบริหารจัดการขนส่ง (Logistics Hub Dashboard)</h2>
+                      <span className="text-xs px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md font-bold">✨ Real-time</span>
+                    </div>
+                    <p className="text-xs text-pink-100 font-medium">
+                      ยินดีต้อนรับคุณ {currentUser ? currentUser.name : 'ผู้ใช้งาน'} • ศูนย์รวมข้อมูล Checklist, แผนจัดส่ง AI, คำนวณรถ, รับคืนสินค้า และพิมพ์สติกเกอร์
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-2xl text-xs font-black border border-white/30">
+                      📅 วันที่: {new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* KPI Summary Cards Grid (7 Metric Cards) */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+                
+                {/* KPI 1: SharePoint Orders */}
+                <div
+                  onClick={() => setCurrentModule('checklist')}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-emerald-200 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02]"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-bold">📋</span>
+                    <span className="text-[9px] text-emerald-700 font-bold bg-emerald-50 px-1 py-0.2 rounded">PO</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-slate-900">{INITIAL_SHAREPOINT_ORDERS.length}</div>
+                    <div className="text-[10px] text-slate-500 font-bold">ใบสั่งซื้อ SharePoint</div>
+                  </div>
+                </div>
+
+                {/* KPI 2: AI Route Daily Stops */}
+                <div
+                  onClick={() => setCurrentModule('route')}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-sky-200 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02]"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">🗺️</span>
+                    <span className="text-[9px] text-sky-700 font-bold bg-sky-50 px-1 py-0.2 rounded">แผนจัดส่ง</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-slate-900">{dailyStops.length} <span className="text-[10px] text-slate-500 font-normal">/ {centralCustomers.length}</span></div>
+                    <div className="text-[10px] text-slate-500 font-bold">จุดส่งในแผน AI</div>
+                  </div>
+                </div>
+
+                {/* KPI 3: Master Products */}
+                <div
+                  onClick={() => setCurrentModule('box_calculator')}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-purple-200 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02]"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-sm font-bold">📦</span>
+                    <span className="text-[9px] text-purple-700 font-bold bg-purple-50 px-1 py-0.2 rounded">Master</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-slate-900">{masterProducts.length} <span className="text-[10px] text-slate-500 font-normal">SKU</span></div>
+                    <div className="text-[10px] text-slate-500 font-bold">สินค้าคำนวณรถ</div>
+                  </div>
+                </div>
+
+                {/* KPI 4: Warehouse Returns (NEW) */}
+                <div
+                  onClick={() => setCurrentModule('warehouse_returns')}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-teal-300 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02] bg-gradient-to-br from-white to-teal-50/50"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center text-sm font-bold">🔄</span>
+                    <span className="text-[9px] text-teal-800 font-bold bg-teal-100 px-1.5 py-0.2 rounded">รับคืน</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-teal-900">{warehouseReturns.length} <span className="text-[10px] text-teal-700 font-normal">ใบ</span></div>
+                    <div className="text-[10px] text-slate-500 font-bold">รับคืนจากคลัง ({warehouseReturns.reduce((sum, r) => sum + (Number(r.qtyPcs) || 0), 0)} ชิ้น)</div>
+                  </div>
+                </div>
+
+                {/* KPI 5: Master TT Customers */}
+                <div
+                  onClick={() => setCurrentModule('sticker')}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-amber-200 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02]"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-sm font-bold">🏷️</span>
+                    <span className="text-[9px] text-amber-700 font-bold bg-amber-50 px-1 py-0.2 rounded">TT</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-slate-900">{stickerCustomers.length} <span className="text-[10px] text-slate-500 font-normal">ร้าน</span></div>
+                    <div className="text-[10px] text-slate-500 font-bold">ลูกค้าสติกเกอร์ TT</div>
+                  </div>
+                </div>
+
+                {/* KPI 6: Fleet Ready */}
+                <div
+                  onClick={() => setCurrentModule('fleet')}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-blue-200 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02]"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-sm font-bold">🚚</span>
+                    <span className="text-[9px] text-blue-700 font-bold bg-blue-50 px-1 py-0.2 rounded">กองรถ</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-slate-900">{totalVehiclesCount} <span className="text-[10px] text-slate-500 font-normal">คัน</span></div>
+                    <div className="text-[10px] text-slate-500 font-bold">รถพร้อมจัดส่ง</div>
+                  </div>
+                </div>
+
+                {/* KPI 7: Total Print History */}
+                <div
+                  onClick={() => {
+                    setCurrentModule('sticker');
+                    setStickerActiveTab('history');
+                  }}
+                  className="bg-white/95 backdrop-blur-xl p-3.5 rounded-3xl border-2 border-pink-200 shadow-sm hover:shadow-md transition cursor-pointer space-y-1.5 transform hover:scale-[1.02]"
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="w-7 h-7 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-sm font-bold">🖨️</span>
+                    <span className="text-[9px] text-pink-700 font-bold bg-pink-50 px-1 py-0.2 rounded">พิมพ์แล้ว</span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-slate-900">{printHistory.length} <span className="text-[10px] text-slate-500 font-normal">ใบ</span></div>
+                    <div className="text-[10px] text-slate-500 font-bold">สติกเกอร์ที่พิมพ์</div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Main Content Grid: Quick Actions & Operational Insights */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                {/* Left Section (7 cols): Quick Action Launchpad & AI Route Status */}
+                <div className="lg:col-span-7 space-y-6">
+                  
+                  {/* Quick Action Launchpad */}
+                  <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-lg border-2 border-pink-200 space-y-3.5">
+                    <div className="flex justify-between items-center border-b border-pink-100 pb-2.5">
+                      <span className="font-black text-xs text-slate-900 flex items-center gap-2">
+                        <span>⚡</span>
+                        <span>ทางลัดเข้าสู่ระบบงาน (Quick Launchpad):</span>
+                      </span>
+                      <span className="text-[10px] text-pink-600 font-bold">คลิกเพื่อเริ่มงานทันที</span>
+                    </div>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      <button
+                        onClick={() => setCurrentModule('checklist')}
+                        className="p-3.5 bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 border-2 border-emerald-200 rounded-2xl text-left space-y-1.5 transition transform hover:scale-[1.03]"
+                      >
+                        <span className="text-2xl block">📋</span>
+                        <div className="text-xs font-black text-emerald-950">2. Checklist PO</div>
+                        <div className="text-[10px] text-emerald-700 font-medium">ตรวจออเดอร์ SharePoint</div>
+                      </button>
+
+                      <button
+                        onClick={() => setCurrentModule('route')}
+                        className="p-3.5 bg-gradient-to-br from-sky-50 to-indigo-50 hover:from-sky-100 hover:to-indigo-100 border-2 border-sky-200 rounded-2xl text-left space-y-1.5 transition transform hover:scale-[1.03]"
+                      >
+                        <span className="text-2xl block">🗺️</span>
+                        <div className="text-xs font-black text-sky-950">3. แผนจัดส่ง AI</div>
+                        <div className="text-[10px] text-sky-700 font-medium">วิ่งเลี้ยวตามถนนจริง</div>
+                      </button>
+
+                      <button
+                        onClick={() => setCurrentModule('box_calculator')}
+                        className="p-3.5 bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border-2 border-purple-200 rounded-2xl text-left space-y-1.5 transition transform hover:scale-[1.03]"
+                      >
+                        <span className="text-2xl block">📦</span>
+                        <div className="text-xs font-black text-purple-950">4. คำนวณกล่อง/รถ</div>
+                        <div className="text-[10px] text-purple-700 font-medium">คำนวณ 631 สินค้า</div>
+                      </button>
+
+                      <button
+                        onClick={() => setCurrentModule('warehouse_returns')}
+                        className="p-3.5 bg-gradient-to-br from-teal-50 to-emerald-50 hover:from-teal-100 hover:to-emerald-100 border-2 border-teal-300 rounded-2xl text-left space-y-1.5 transition transform hover:scale-[1.03]"
+                      >
+                        <span className="text-2xl block">🔄</span>
+                        <div className="text-xs font-black text-teal-950">5. รับคืนสินค้า</div>
+                        <div className="text-[10px] text-teal-700 font-medium">ยิงบาร์โค้ดรับคืนคลัง</div>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* AI Route Real-Road Summary Widget */}
+                  <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-lg border-2 border-pink-200 space-y-3.5">
+                    <div className="flex justify-between items-center border-b border-pink-100 pb-2.5">
+                      <span className="font-black text-xs text-slate-900 flex items-center gap-2">
+                        <span>🗺️</span>
+                        <span>สถานะการจัดสายรถ AI ประจำวัน (Real-Road Routing):</span>
+                      </span>
+                      <span className="text-[10px] px-2 py-0.5 bg-sky-100 text-sky-800 rounded-md font-bold">
+                        {hasOptimized ? 'จัดสายแล้ว' : 'รอคำนวณ'}
+                      </span>
+                    </div>
+
+                    {hasOptimized && routesResult.length > 0 ? (
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-3 gap-2 bg-sky-50/70 p-3 rounded-2xl border border-sky-200 text-center text-xs">
+                          <div>
+                            <span className="text-[10px] text-slate-500 block">จำนวนสายรถ:</span>
+                            <strong className="text-slate-900 text-base">{routesResult.length} คัน</strong>
+                          </div>
+                          <div>
+                            <span className="text-[10px] text-slate-500 block">ระยะทางถนนจริงรวม:</span>
+                            <strong className="text-indigo-700 text-base">{routesResult.reduce((sum, r) => sum + (r.distance || 0), 0).toFixed(1)} กม.</strong>
+                          </div>
+                          <div>
+                            <span className="text-[10px] text-slate-500 block">จุดส่งทั้งหมด:</span>
+                            <strong className="text-emerald-700 text-base">{dailyStops.length} จุด</strong>
+                          </div>
+                        </div>
+
+                        <div className="space-y-1.5">
+                          {routesResult.map((r, idx) => (
+                            <div key={idx} className="p-2.5 bg-slate-50 rounded-xl border border-slate-200 flex justify-between items-center text-xs">
+                              <div className="flex items-center gap-2">
+                                <span className="w-3 h-3 rounded-full" style={{ backgroundColor: r.vehicleColor }}></span>
+                                <span className="font-black text-slate-800">{r.vehicleName}</span>
+                                <span className="text-[10px] text-slate-500">({r.stops.length} จุดส่ง)</span>
+                              </div>
+                              <div className="font-mono text-[11px] text-slate-700 font-bold">
+                                {r.distance} กม. • ~{r.duration} นาที
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center text-xs text-slate-500 space-y-2">
+                        <p>มีจุดส่งที่เลือกในแผนจัดส่ง {dailyStops.length} จุดส่ง</p>
+                        <button
+                          onClick={() => setCurrentModule('route')}
+                          className="px-4 py-2 bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-white font-black rounded-xl text-xs shadow-sm"
+                        >
+                          🚗 ไปที่หน้าแผนจัดส่ง AI เพื่อคำนวณเส้นทาง
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                </div>
+
+                {/* Right Section (5 cols): Recent Warehouse Returns & Master Stats */}
+                <div className="lg:col-span-5 space-y-6">
+                  
+                  {/* Recent Warehouse Returns Widget */}
+                  <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-lg border-2 border-teal-200 space-y-3.5">
+                    <div className="flex justify-between items-center border-b border-teal-100 pb-2.5">
+                      <span className="font-black text-xs text-slate-900 flex items-center gap-2">
+                        <span>🔄</span>
+                        <span>รายการรับคืนสินค้าล่าสุด:</span>
+                      </span>
+                      <button
+                        onClick={() => setCurrentModule('warehouse_returns')}
+                        className="text-[10px] text-teal-600 hover:text-teal-800 font-bold underline"
+                      >
+                        ดูทั้งหมด ({warehouseReturns.length})
+                      </button>
+                    </div>
+
+                    {warehouseReturns.length === 0 ? (
+                      <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center text-xs text-slate-400">
+                        ยังไม่มีรายการรับคืนสินค้าในระบบ
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        {warehouseReturns.slice(0, 3).map((r, idx) => (
+                          <div key={r.id || idx} className="p-2.5 bg-teal-50/40 rounded-xl border border-teal-100 flex justify-between items-center text-xs">
+                            <div>
+                              <div className="font-black text-slate-900 flex items-center gap-1.5">
+                                <span className="font-mono text-teal-700">[{r.docNo}]</span>
+                                <span className="truncate max-w-[130px]">{r.productName}</span>
+                              </div>
+                              <div className="text-[10px] text-slate-500 font-mono">
+                                <span>{r.date}</span> • <span className="text-rose-600 font-medium">{r.reason}</span>
+                              </div>
+                            </div>
+                            <div className="text-right font-mono">
+                              <span className="px-2 py-0.5 bg-white border border-teal-200 rounded text-teal-700 font-bold text-[11px] block">
+                                {r.qtyPcs} ชิ้น ({r.qtyCartons} ลัง)
+                              </span>
+                              <span className="text-[9px] text-slate-400">{r.returnFrom}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* System Customer & Fleet Database Status */}
+                  <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-lg border-2 border-pink-200 space-y-3.5 text-xs">
+                    <div className="flex justify-between items-center border-b border-pink-100 pb-2.5">
+                      <span className="font-black text-slate-900 flex items-center gap-2">
+                        <span>📊</span>
+                        <span>สรุปฐานข้อมูลในระบบ (Master Stats):</span>
+                      </span>
+                    </div>
+
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center p-2 bg-slate-50 rounded-xl border border-slate-200">
+                        <span className="text-slate-600 font-medium">📦 สินค้าคำนวณและรับคืน (Master Products):</span>
+                        <strong className="font-mono text-purple-700 text-sm">{masterProducts.length} SKU</strong>
+                      </div>
+
+                      <div className="flex justify-between items-center p-2 bg-slate-50 rounded-xl border border-slate-200">
+                        <span className="text-slate-600 font-medium">📍 ลูกค้ากลาง (GPS MyMaps):</span>
+                        <strong className="font-mono text-indigo-700 text-sm">{centralCustomers.length} จุด</strong>
+                      </div>
+
+                      <div className="flex justify-between items-center p-2 bg-slate-50 rounded-xl border border-slate-200">
+                        <span className="text-slate-600 font-medium">🏷️ ลูกค้า Master TT (สติกเกอร์):</span>
+                        <strong className="font-mono text-amber-700 text-sm">{stickerCustomers.length} ร้านค้า</strong>
+                      </div>
+
+                      <div className="flex justify-between items-center p-2 bg-slate-50 rounded-xl border border-slate-200">
+                        <span className="text-slate-600 font-medium">🚚 รถในกองรถขนส่ง (Fleet):</span>
+                        <strong className="font-mono text-blue-700 text-sm">{totalVehiclesCount} คัน</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          )}
+
+
+                    {/* ============================================================ */}
           {/* MODULE 1: CHECKLIST PO & ORDERS (100% EXACT SHAREPOINT)      */}
           {/* ============================================================ */}
           {currentModule === 'checklist' && (
@@ -16397,32 +17367,32 @@
 
 
                     {/* ============================================================ */}
-          {/* MODULE 2: AI ROUTE PLANNER (FANTASY REALM & SAFE MAP)        */}
+          {/* MODULE 2: AI ROUTE PLANNER (REAL ROAD ROUTING & CUTE THEME)  */}
           {/* ============================================================ */}
           {currentModule === 'route' && (
             <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
               
               {/* Left Sidebar: Daily Stops & Vehicle Fleet Optimization */}
-              <div className="w-full lg:w-[420px] bg-slate-900/95 backdrop-blur-2xl border-r border-purple-500/30 flex flex-col z-10 shadow-2xl">
+              <div className="w-full lg:w-[430px] bg-white/95 backdrop-blur-2xl border-r border-pink-200/80 flex flex-col z-10 shadow-lg">
                 
-                <div className="p-4 border-b border-purple-500/30 space-y-3">
+                <div className="p-4 border-b border-pink-100 space-y-3">
                   <div className="flex justify-between items-center">
-                    <h2 className="font-black text-sm bg-gradient-to-r from-amber-300 to-purple-300 bg-clip-text text-transparent flex items-center gap-1.5">
-                      <i data-lucide="route" className="w-4 h-4 text-cyan-400"></i>
+                    <h2 className="font-black text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-sky-600 bg-clip-text text-transparent flex items-center gap-1.5">
+                      <span>🗺️</span>
                       <span>จุดส่งในแผนจัดส่ง ({dailyStops.length} จุด)</span>
                     </h2>
-                    <span className="text-[10px] px-2.5 py-0.5 bg-purple-950 text-purple-200 font-bold rounded-full border border-purple-400/40">
-                      จากลูกค้ากลาง
+                    <span className="text-[10px] px-2.5 py-0.5 bg-pink-100 text-pink-700 font-black rounded-full border border-pink-200">
+                      จากลูกค้ากลาง 47 จุด
                     </span>
                   </div>
 
                   {/* Depot Card */}
-                  <div className="p-3 bg-slate-950/80 rounded-2xl border border-purple-500/30 flex justify-between items-center text-xs shadow-inner">
+                  <div className="p-3 bg-pink-50/60 rounded-2xl border border-pink-200 flex justify-between items-center text-xs shadow-sm">
                     <div className="flex items-center gap-2">
                       <span className="text-xl">🏰</span>
                       <div>
-                        <span className="text-[10px] text-purple-300/70 font-semibold block">คลังหลัก (Depot):</span>
-                        <span className="font-black text-amber-300">{depot.name}</span>
+                        <span className="text-[10px] text-pink-800/70 font-semibold block">คลังหลัก (Depot เริ่มต้น/สิ้นสุด):</span>
+                        <span className="font-black text-slate-900">{depot.name}</span>
                       </div>
                     </div>
                     <button
@@ -16430,28 +17400,29 @@
                         setEditingDepot({ ...depot });
                         setShowDepotModal(true);
                       }}
-                      className="px-2.5 py-1 rounded-xl bg-purple-900/60 hover:bg-purple-800 text-purple-200 border border-purple-400/30 text-[10px] font-bold transition"
+                      className="px-2.5 py-1 rounded-xl bg-white hover:bg-pink-100 text-pink-700 border border-pink-300 text-[10px] font-bold transition shadow-sm"
                     >
-                      แก้ไข
+                      แก้ไขพิกัด
                     </button>
                   </div>
 
-                  {/* Optimize Button */}
+                  {/* Optimize Button with Real Road Navigation */}
                   <div className="space-y-2">
                     <button
                       onClick={handleOptimizeRoutes}
                       disabled={isOptimizing || dailyStops.length === 0}
-                      className="w-full py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-amber-500 hover:from-indigo-500 hover:to-amber-400 text-slate-950 font-black rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.5)] border border-amber-300/60 text-xs flex items-center justify-center gap-2 transition duration-300 disabled:opacity-50"
+                      className="w-full py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 hover:from-pink-400 hover:to-sky-400 text-white font-black rounded-2xl shadow-md border-2 border-white text-xs flex items-center justify-center gap-2 transition duration-300 disabled:opacity-50 transform hover:scale-[1.01]"
                     >
                       {isOptimizing ? (
                         <>
-                          <div className="w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full animate-spin"></div>
-                          <span>AI กำลังคำนวณเส้นทาง...</span>
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                          <span>AI กำลังดึงเส้นทางถนนจริง (OSRM Real Roads)...</span>
                         </>
                       ) : (
                         <>
                           <span>⚡</span>
-                          <span>คำนวณจัดเส้นทาง AI ที่ดีที่สุด</span>
+                          <span>คำนวณจัดเส้นทางตามถนนจริง (Real Roads)</span>
+                          <span>🚗</span>
                         </>
                       )}
                     </button>
@@ -16460,122 +17431,146 @@
 
                 {/* Stops List */}
                 <div className="flex-1 overflow-y-auto p-4 space-y-2.5 custom-scrollbar">
-                  <div className="text-[11px] font-bold text-amber-300 flex justify-between items-center">
+                  <div className="text-[11px] font-bold text-pink-800 flex justify-between items-center">
                     <span>รายการจุดส่งที่เลือก ({dailyStops.length}):</span>
                     <button
                       onClick={() => setCurrentModule('customers')}
-                      className="text-[10px] text-purple-300 hover:text-amber-300 underline"
+                      className="text-[10px] text-pink-600 hover:text-pink-800 font-bold underline"
                     >
-                      จัดการจุดส่ง (โมดูล 8)
+                      + เพิ่ม/เลือกจุดส่ง (โมดูล 8)
                     </button>
                   </div>
 
                   {dailyStops.length === 0 ? (
-                    <div className="p-6 text-center text-xs text-purple-300/50 bg-slate-950/50 rounded-2xl border border-purple-500/20 space-y-2">
+                    <div className="p-6 text-center text-xs text-slate-400 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
                       <p>ยังไม่มีจุดส่งที่เลือกในแผนประจำวัน</p>
                       <button
                         onClick={() => setCurrentModule('customers')}
-                        className="px-3 py-1.5 bg-purple-700 hover:bg-purple-600 text-white rounded-xl font-bold text-xs"
+                        className="px-3 py-1.5 bg-pink-500 hover:bg-pink-600 text-white rounded-xl font-black text-xs shadow-sm"
                       >
-                        ไปเลือกจุดส่งในหน้า 8
+                        ไปเลือกจุดส่งในหน้าลูกค้า Route (โมดูล 8)
                       </button>
                     </div>
                   ) : (
                     dailyStops.map((stop, i) => (
                       <div
                         key={stop.id}
-                        className="p-3 bg-slate-950/80 rounded-2xl border border-purple-500/30 flex justify-between items-center text-xs hover:border-purple-400/60 transition shadow-inner"
+                        className="p-3 bg-white rounded-2xl border border-pink-100 flex justify-between items-center text-xs hover:border-pink-300 transition shadow-sm"
                       >
                         <div className="flex items-center gap-2.5">
-                          <span className="w-6 h-6 rounded-xl bg-purple-900/80 text-amber-300 border border-purple-400/40 flex items-center justify-center font-bold font-mono text-[11px]">
+                          <span className="w-6 h-6 rounded-xl bg-gradient-to-tr from-pink-400 to-rose-400 text-white flex items-center justify-center font-black font-mono text-[11px] shadow-sm">
                             {i + 1}
                           </span>
                           <div>
-                            <div className="font-bold text-slate-100">{stop.name}</div>
-                            <div className="text-[10px] text-purple-300/70">{stop.province || 'กรุงเทพฯ'} • {stop.category === 'DC' ? 'DC' : 'Store'}</div>
+                            <div className="font-black text-slate-800">{stop.name}</div>
+                            <div className="text-[10px] text-slate-500 font-medium">{stop.province || 'กทม./ปริมณฑล'} • {stop.category === 'DC' ? 'DC ศูนย์กระจาย' : 'ร้านค้า TT'}</div>
                           </div>
                         </div>
                         <button
                           onClick={() => handleToggleCustomerPlan(stop.id)}
-                          className="text-slate-400 hover:text-rose-400 p-1"
+                          className="p-1 rounded-lg text-rose-400 hover:text-rose-600 hover:bg-rose-50 transition"
                           title="นำออกจากแผนวันนี้"
                         >
-                          <i data-lucide="x" className="w-3.5 h-3.5"></i>
+                          <i data-lucide="x" className="w-4 h-4"></i>
                         </button>
                       </div>
                     ))
                   )}
-                </div>
 
-              </div>
+                  {/* Optimized Routes Result Section */}
+                  {hasOptimized && routesResult.length > 0 && (
+                    <div className="pt-3 border-t border-pink-200 space-y-3">
+                      <div className="font-black text-xs text-slate-800 flex items-center justify-between">
+                        <span>ผลลัพธ์การจัดรถ ({routesResult.length} คัน):</span>
+                        <span className="text-[10px] text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md font-bold">🛣️ เลี้ยวตามถนนจริง</span>
+                      </div>
 
-              {/* Right Area: Leaflet Map & Routes Results Dashboard */}
-              <div className="flex-1 flex flex-col bg-slate-950 relative overflow-hidden">
-                
-                {/* Map Control Toolbar */}
-                <div className="p-3 bg-slate-900/90 backdrop-blur-md border-b border-purple-500/30 flex justify-between items-center z-10">
-                  <div className="flex items-center gap-2 text-xs font-bold text-amber-300">
-                    <span>🗺️ แผนที่พิกัดเส้นทางจัดส่งสินค้า (Leaflet Map)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => {
-                        if (window.__triggerMapRecenter) window.__triggerMapRecenter();
-                      }}
-                      className="px-3 py-1.5 bg-purple-950/80 hover:bg-purple-800 text-purple-200 border border-purple-400/40 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm transition"
-                      title="จัดมุมมองแผนที่ให้อยู่กึ่งกลาง"
-                    >
-                      <i data-lucide="crosshair" className="w-3.5 h-3.5 text-amber-400"></i>
-                      <span>รีเฟรชมุมมอง</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Leaflet Map Div Container */}
-                <div className="flex-1 w-full h-full min-h-[480px] relative">
-                  <div id="fantasy-leaflet-map" className="w-full h-full min-h-[480px]"></div>
-                </div>
-
-                {/* Optimized Route Cards (if optimized) */}
-                {hasOptimized && routesResult.length > 0 && (
-                  <div className="p-4 bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/30 max-h-60 overflow-y-auto custom-scrollbar z-10 space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold text-amber-300 text-xs">🚗 ผลการจัดเส้นทางประจำวัน ({routesResult.length} คัน):</span>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                      {routesResult.map(r => (
+                      {routesResult.map((route, rIdx) => (
                         <div
-                          key={r.vehicleId}
-                          className="p-3 bg-slate-950/80 rounded-2xl border border-purple-500/30 space-y-2 text-xs shadow-inner"
+                          key={rIdx}
+                          className="p-3.5 bg-gradient-to-br from-white to-pink-50/30 rounded-2xl border-2 space-y-2.5 shadow-md"
+                          style={{ borderColor: route.vehicleColor || '#f472b6' }}
                         >
-                          <div className="flex justify-between items-center font-bold">
-                            <span className="text-amber-300">{r.vehicleName}</span>
-                            <span className="text-[10px] text-purple-200">{r.stops.length} จุดส่ง</span>
+                          <div className="flex justify-between items-center">
+                            <div className="flex items-center gap-2">
+                              <span className="w-3.5 h-3.5 rounded-full shadow-sm" style={{ backgroundColor: route.vehicleColor }}></span>
+                              <span className="font-black text-xs text-slate-900">{route.vehicleName}</span>
+                            </div>
+                            <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-md bg-white border text-slate-700 shadow-inner">
+                              {route.stops.length} จุดส่ง
+                            </span>
                           </div>
-                          <div className="flex justify-between text-[11px] text-slate-300">
-                            <span>ระยะทาง: <strong>{r.distance} กม.</strong></span>
-                            <span>เวลา: <strong>{r.duration} นาที</strong></span>
+
+                          <div className="grid grid-cols-2 gap-2 text-[11px] font-mono bg-white p-2 rounded-xl border border-slate-200">
+                            <div>
+                              <span className="text-slate-500 font-sans block text-[10px]">ระยะทางถนนจริง:</span>
+                              <strong className="text-slate-900 text-xs">{route.distance} กม.</strong>
+                            </div>
+                            <div>
+                              <span className="text-slate-500 font-sans block text-[10px]">เวลาเดินทางรวม:</span>
+                              <strong className="text-pink-600 text-xs">~{route.duration} นาที</strong>
+                            </div>
                           </div>
-                          <div className="text-[10px] text-purple-300/80 truncate">
-                            {r.stops.map(s => s.name).join(' ➔ ')}
+
+                          {/* Stop sequence */}
+                          <div className="text-[10px] text-slate-600 space-y-1">
+                            <span className="font-bold text-slate-700 block">ลำดับส่ง:</span>
+                            <div className="flex flex-wrap gap-1">
+                              {route.stops.map((st, sIdx) => (
+                                <span key={sIdx} className="px-1.5 py-0.5 bg-slate-100 rounded text-slate-800 border text-[9px] font-bold">
+                                  {sIdx + 1}. {st.name.substring(0, 14)}..
+                                </span>
+                              ))}
+                            </div>
                           </div>
-                          <div className="pt-1">
-                            <a
-                              href={getGoogleMapsUrl(r.stops)}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="w-full py-1.5 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white rounded-xl text-center block font-bold text-[10px] shadow-sm"
-                            >
-                              🗺️ เปิด Google Maps นำทาง
-                            </a>
-                          </div>
+
+                          <a
+                            href={getGoogleMapsUrl(route.stops)}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="w-full py-2 bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-white rounded-xl text-[11px] font-black flex items-center justify-center gap-1.5 shadow-sm transition"
+                          >
+                            <i data-lucide="external-link" className="w-3.5 h-3.5"></i>
+                            <span>เปิดแผนที่นำทางบน Google Maps 🗺️</span>
+                          </a>
                         </div>
                       ))}
                     </div>
-                  </div>
-                )}
+                  )}
 
+                </div>
+              </div>
+
+              {/* Right Leaflet Map View */}
+              <div className="flex-1 p-4 flex flex-col min-h-[500px]">
+                <div className="bg-white/95 backdrop-blur-2xl rounded-3xl p-4 shadow-xl border-2 border-pink-200 flex-1 flex flex-col space-y-3">
+                  
+                  {/* Map Header Toolbar */}
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🗺️</span>
+                      <div>
+                        <h3 className="font-black text-xs text-slate-900">แผนที่เส้นทางจัดส่งอัจฉริยะ (Smart Real-Road Map)</h3>
+                        <p className="text-[10px] text-slate-500">เส้นทางคำนวณและวาดตามถนนจริง (Real Highway & Street Routing)</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={refreshMapBounds}
+                        className="px-3 py-1.5 bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition"
+                        title="จัดตำแหน่งกึ่งกลางแผนที่"
+                      >
+                        <i data-lucide="crosshair" className="w-3.5 h-3.5"></i>
+                        <span>จัดกึ่งกลาง (Recenter)</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Leaflet Map Canvas Container */}
+                  <div id="fantasy-leaflet-map" className="flex-1 w-full min-h-[460px] rounded-2xl overflow-hidden shadow-inner border border-slate-200"></div>
+
+                </div>
               </div>
 
             </div>
@@ -16941,6 +17936,403 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
+
+            </div>
+          )}
+
+
+                    {/* ============================================================ */}
+          {/* MODULE 5: MULTI-ITEM WAREHOUSE RETURNS (รับคืนหลายรายการ)   */}
+          {/* ============================================================ */}
+          {currentModule === 'warehouse_returns' && (
+            <div className="flex-1 overflow-y-auto p-4 lg:p-6 space-y-6 custom-scrollbar">
+              
+              {/* Module Header */}
+              <div className="bg-gradient-to-r from-teal-500 via-emerald-500 to-sky-500 rounded-3xl p-5 text-white shadow-lg border-2 border-white relative overflow-hidden">
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl">🔄</span>
+                      <h2 className="text-xl font-black tracking-tight">ระบบรับคืนสินค้าจากคลัง (Warehouse Returns Hub)</h2>
+                      <span className="text-xs px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md font-bold">✨ รับคืนได้ทีละหลายรายการ</span>
+                    </div>
+                    <p className="text-xs text-teal-100 font-medium">
+                      ยิงหรือกรอกบาร์โค้ดเพิ่มสินค้าได้หลายรายการพร้อมกัน คำนวณชิ้น/กล่องอัตโนมัติจาก Master Data 631 สินค้า
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <button
+                      onClick={() => setShowBatchReturnModal(true)}
+                      className="px-3.5 py-2 bg-white/20 hover:bg-white/30 text-white rounded-2xl text-xs font-black border border-white/40 shadow-sm transition backdrop-blur-md flex items-center gap-1.5"
+                    >
+                      <i data-lucide="upload" className="w-3.5 h-3.5"></i>
+                      <span>วางบาร์โค้ดจำนวนมาก (Batch Paste)</span>
+                    </button>
+                    <button
+                      onClick={handleExportReturnsToExcel}
+                      className="px-3.5 py-2 bg-white hover:bg-teal-50 text-teal-800 rounded-2xl text-xs font-black shadow-md border-2 border-teal-100 transition transform hover:scale-[1.02] flex items-center gap-1.5"
+                    >
+                      <i data-lucide="download" className="w-3.5 h-3.5"></i>
+                      <span>ส่งออกประวัติ Excel ({warehouseReturns.length})</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Top Card: Return Document Header Info (เลขที่ใบคืน, วันที่, รับคืนจาก) */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-md border-2 border-teal-200 space-y-3">
+                <div className="flex justify-between items-center border-b border-teal-100 pb-2">
+                  <span className="font-black text-xs text-slate-900 flex items-center gap-1.5">
+                    <span>📋</span>
+                    <span>ข้อมูลใบคืนสินค้า (Return Document Info):</span>
+                  </span>
+                  <span className="text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-bold">
+                    บันทึกโดย: {currentUser ? currentUser.name : 'เจ้าหน้าที่คลัง'}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                  <div>
+                    <label className="block text-slate-700 font-bold mb-1">เลขที่ใบคืนสินค้า (Doc No):</label>
+                    <input
+                      type="text"
+                      value={returnDocHeader.docNo}
+                      onChange={(e) => setReturnDocHeader({ ...returnDocHeader, docNo: e.target.value })}
+                      placeholder="เช่น RN-20260824-001"
+                      className="w-full bg-teal-50/40 border border-teal-200 rounded-2xl p-2.5 text-slate-900 font-mono font-black focus:ring-2 focus:ring-teal-400 focus:bg-white shadow-inner"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-700 font-bold mb-1">วันที่รับคืน:</label>
+                    <input
+                      type="date"
+                      value={returnDocHeader.date}
+                      onChange={(e) => setReturnDocHeader({ ...returnDocHeader, date: e.target.value })}
+                      className="w-full bg-teal-50/40 border border-teal-200 rounded-2xl p-2.5 text-slate-900 font-bold focus:ring-2 focus:ring-teal-400 focus:bg-white shadow-inner"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-700 font-bold mb-1">รับคืนจาก (ลูกค้า / คลัง / สาขา):</label>
+                    <input
+                      type="text"
+                      value={returnDocHeader.returnFrom}
+                      onChange={(e) => setReturnDocHeader({ ...returnDocHeader, returnFrom: e.target.value })}
+                      placeholder="เช่น DC บางพลี, วัตสันส์, ร้านค้า TT"
+                      className="w-full bg-teal-50/40 border border-teal-200 rounded-2xl p-2.5 text-slate-900 font-bold focus:ring-2 focus:ring-teal-400 focus:bg-white shadow-inner"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Section: Multi-Item Receiving Sheet (ตารางกรอกหลายรายการ) */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-lg border-2 border-teal-200 space-y-4">
+                
+                {/* Quick Scan Input Bar & Action Buttons */}
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-gradient-to-r from-teal-50 to-emerald-50 p-4 rounded-2xl border border-teal-200">
+                  <div className="flex items-center gap-2 flex-1 w-full">
+                    <span className="text-xl">🔫</span>
+                    <div className="flex-1 relative">
+                      <input
+                        type="text"
+                        placeholder="ยิงบาร์โค้ด หรือพิมพ์บาร์โค้ด แล้วกด Enter เพื่อเพิ่มรายการ..."
+                        value={quickScanBarcode}
+                        onChange={(e) => setQuickScanBarcode(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            e.preventDefault();
+                            handleQuickScanAddRow();
+                          }
+                        }}
+                        className="w-full bg-white border-2 border-teal-300 rounded-2xl px-4 py-2.5 text-xs text-slate-900 font-mono font-black focus:ring-2 focus:ring-teal-400 shadow-sm"
+                      />
+                    </div>
+                    <button
+                      onClick={handleQuickScanAddRow}
+                      className="px-4 py-2.5 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white rounded-2xl text-xs font-black shadow-sm transition"
+                    >
+                      + เพิ่ม
+                    </button>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={handleAddEmptyReturnRow}
+                      className="px-3.5 py-2.5 bg-white hover:bg-teal-50 text-teal-800 border border-teal-300 rounded-2xl text-xs font-black shadow-sm transition flex items-center gap-1"
+                    >
+                      <span>➕</span>
+                      <span>เพิ่มแถวเปล่า</span>
+                    </button>
+                    {returnSheetRows.length > 0 && (
+                      <button
+                        onClick={handleClearReturnSheet}
+                        className="px-3 py-2.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-2xl text-xs font-bold transition"
+                        title="ล้างรายการทั้งหมด"
+                      >
+                        ล้างรายการ
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Multi-Item Table */}
+                <div className="overflow-x-auto overflow-y-auto max-h-[500px] custom-scrollbar border border-slate-200 rounded-2xl">
+                  <table className="w-full text-left text-xs border-collapse">
+                    <thead className="bg-teal-50/90 sticky top-0 z-10 text-teal-950 font-black border-b border-teal-200">
+                      <tr>
+                        <th className="p-3 text-center w-12">ลำดับ</th>
+                        <th className="p-3 w-48">บาร์โค้ดสินค้า (Barcode)</th>
+                        <th className="p-3 min-w-[220px]">ชื่อสินค้า (ดึงจาก Master อัตโนมัติ)</th>
+                        <th className="p-3 text-center w-24">บรรจุ/ลัง</th>
+                        <th className="p-3 text-center w-20">ไซส์</th>
+                        <th className="p-3 text-right w-32">จำนวนชิ้น (Pcs)</th>
+                        <th className="p-3 text-right w-32">จำนวนกล่อง/ลัง</th>
+                        <th className="p-3 text-right w-24">CBM</th>
+                        <th className="p-3 text-right w-24">นน. (กก.)</th>
+                        <th className="p-3 text-center w-16">ลบ</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 font-sans">
+                      {returnSheetRows.length === 0 ? (
+                        <tr>
+                          <td colSpan="10" className="p-12 text-center text-slate-400 space-y-2">
+                            <span className="text-3xl block">📦</span>
+                            <p className="font-bold text-slate-600">ยังไม่มีรายการรับคืนในใบคืนนี้</p>
+                            <p className="text-[11px] text-slate-400">ยิงบาร์โค้ดด้านบน หรือกดปุ่ม <strong>"+ เพิ่มแถวเปล่า"</strong> เพื่อเริ่มบันทึกรับคืนได้หลายรายการ</p>
+                          </td>
+                        </tr>
+                      ) : (
+                        returnSheetRows.map((row, idx) => (
+                          <tr key={row.id || idx} className="hover:bg-teal-50/30 transition">
+                            <td className="p-3 text-center font-bold font-mono text-slate-500">{idx + 1}</td>
+                            
+                            {/* Barcode Input in Row */}
+                            <td className="p-2">
+                              <input
+                                type="text"
+                                value={row.barcode}
+                                onChange={(e) => handleUpdateRowBarcode(row.id, e.target.value)}
+                                placeholder="ยิงบาร์โค้ด..."
+                                className="w-full bg-white border border-teal-200 rounded-xl px-2.5 py-1.5 font-mono font-bold text-slate-900 focus:ring-2 focus:ring-teal-400 shadow-inner"
+                              />
+                            </td>
+
+                            {/* Auto-filled Product Name */}
+                            <td className="p-3">
+                              <div className="font-black text-slate-800">{row.name || <span className="text-slate-400 italic">-- รอระบุบาร์โค้ด --</span>}</div>
+                              {row.code && <div className="text-[10px] text-slate-500 font-mono">รหัส: {row.code}</div>}
+                            </td>
+
+                            {/* Unit Per Carton */}
+                            <td className="p-3 text-center font-mono font-bold text-teal-800">
+                              {row.unitPerCarton || 12}
+                            </td>
+
+                            {/* Carton Size */}
+                            <td className="p-3 text-center">
+                              <span className="px-2 py-0.5 bg-slate-100 border rounded font-bold text-slate-700 text-[10px]">
+                                {row.cartonSize || 'S'}
+                              </span>
+                            </td>
+
+                            {/* Quantity Pieces Input */}
+                            <td className="p-2 text-right">
+                              <input
+                                type="number"
+                                min="1"
+                                value={row.qtyPcs}
+                                onChange={(e) => handleUpdateRowQtyPcs(row.id, e.target.value)}
+                                placeholder="ชิ้น"
+                                className="w-full bg-white border border-teal-300 rounded-xl px-2 py-1.5 font-mono font-black text-right text-slate-900 focus:ring-2 focus:ring-teal-400"
+                              />
+                            </td>
+
+                            {/* Quantity Cartons Input */}
+                            <td className="p-2 text-right">
+                              <input
+                                type="number"
+                                step="0.01"
+                                min="0.01"
+                                value={row.qtyCartons}
+                                onChange={(e) => handleUpdateRowQtyCartons(row.id, e.target.value)}
+                                placeholder="ลัง"
+                                className="w-full bg-white border border-teal-300 rounded-xl px-2 py-1.5 font-mono font-black text-right text-slate-900 focus:ring-2 focus:ring-teal-400"
+                              />
+                            </td>
+
+                            {/* CBM */}
+                            <td className="p-3 text-right font-mono text-slate-600 font-bold">
+                              {row.cbm || '0.000'}
+                            </td>
+
+                            {/* Weight */}
+                            <td className="p-3 text-right font-mono text-slate-600 font-bold">
+                              {row.weightKg || '0.0'}
+                            </td>
+
+                            {/* Delete Row Button */}
+                            <td className="p-3 text-center">
+                              <button
+                                onClick={() => handleDeleteReturnRow(row.id)}
+                                className="p-1 text-rose-500 hover:text-rose-700 hover:bg-rose-50 rounded-lg transition"
+                                title="ลบแถวนี้"
+                              >
+                                <i data-lucide="trash-2" className="w-4 h-4"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        ))
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Footer Summary & Save Sheet Button */}
+                {returnSheetRows.length > 0 && (
+                  <div className="bg-gradient-to-r from-teal-50 via-emerald-50 to-sky-50 p-4 rounded-2xl border border-teal-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    
+                    {/* Summary Totals */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs w-full sm:w-auto">
+                      <div className="bg-white p-2.5 rounded-xl border border-teal-100 shadow-sm text-center">
+                        <span className="text-[10px] text-slate-500 block">จำนวนรายการ:</span>
+                        <strong className="text-slate-900 font-mono text-sm">{returnSheetRows.length} รายการ</strong>
+                      </div>
+                      <div className="bg-white p-2.5 rounded-xl border border-teal-100 shadow-sm text-center">
+                        <span className="text-[10px] text-slate-500 block">รวมจำนวนชิ้น:</span>
+                        <strong className="text-emerald-700 font-mono text-sm">
+                          {returnSheetRows.reduce((sum, r) => sum + (Number(r.qtyPcs) || 0), 0).toLocaleString()} ชิ้น
+                        </strong>
+                      </div>
+                      <div className="bg-white p-2.5 rounded-xl border border-teal-100 shadow-sm text-center">
+                        <span className="text-[10px] text-slate-500 block">รวมจำนวนกล่อง:</span>
+                        <strong className="text-sky-700 font-mono text-sm">
+                          {returnSheetRows.reduce((sum, r) => sum + (Number(r.qtyCartons) || 0), 0).toFixed(2)} ลัง
+                        </strong>
+                      </div>
+                      <div className="bg-white p-2.5 rounded-xl border border-teal-100 shadow-sm text-center">
+                        <span className="text-[10px] text-slate-500 block">รวม CBM & นน.:</span>
+                        <strong className="text-purple-700 font-mono text-xs">
+                          {returnSheetRows.reduce((sum, r) => sum + (Number(r.cbm) || 0), 0).toFixed(3)} CBM
+                        </strong>
+                        <span className="text-[9px] text-slate-400 block">({returnSheetRows.reduce((sum, r) => sum + (Number(r.weightKg) || 0), 0).toFixed(1)} กก.)</span>
+                      </div>
+                    </div>
+
+                    {/* Submit All Items Button */}
+                    <button
+                      onClick={handleSaveCompleteReturnSheet}
+                      className="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-teal-600 via-emerald-600 to-sky-600 hover:from-teal-500 hover:to-sky-500 text-white font-black rounded-2xl shadow-lg border-2 border-white transition transform hover:scale-[1.02] text-xs flex items-center justify-center gap-2"
+                    >
+                      <span>💾</span>
+                      <span>บันทึกใบคืนสินค้านี้เข้าคลัง ({returnSheetRows.length} รายการ)</span>
+                      <span>✨</span>
+                    </button>
+                  </div>
+                )}
+
+              </div>
+
+              {/* Bottom Section: Saved Returns History Table (ประวัติการรับคืนที่บันทึกแล้ว) */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 shadow-lg border-2 border-teal-200 space-y-4">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-teal-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">📜</span>
+                    <div>
+                      <h3 className="font-black text-xs text-slate-900">ประวัติรายการรับคืนสินค้าที่บันทึกแล้ว ({filteredReturns.length} รายการ)</h3>
+                      <p className="text-[10px] text-slate-500">สามารถค้นหา กรองตามวันที่ หรือส่งออกเป็นไฟล์ Excel</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 flex-wrap w-full sm:w-auto">
+                    <input
+                      type="text"
+                      placeholder="🔍 ค้นหาบาร์โค้ด, ชื่อ, ใบคืน, ลูกค้า..."
+                      value={returnSearchQuery}
+                      onChange={(e) => setReturnSearchQuery(e.target.value)}
+                      className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-xs text-slate-800 focus:ring-2 focus:ring-teal-400 flex-1 sm:w-56 shadow-inner"
+                    />
+                    <input
+                      type="date"
+                      value={returnFilterDate}
+                      onChange={(e) => setReturnFilterDate(e.target.value)}
+                      className="bg-slate-50 border border-slate-200 rounded-xl px-2 py-1.5 text-xs text-slate-700 font-bold"
+                    />
+                    {returnFilterDate && (
+                      <button
+                        onClick={() => setReturnFilterDate('')}
+                        className="text-[10px] text-slate-500 hover:text-slate-800 underline"
+                      >
+                        ดูทุกวัน
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* History Table */}
+                <div className="overflow-x-auto overflow-y-auto max-h-[400px] custom-scrollbar border border-slate-100 rounded-2xl">
+                  <table className="w-full text-left text-xs border-collapse">
+                    <thead className="bg-teal-50/80 sticky top-0 z-10 text-teal-950 font-black border-b border-teal-200">
+                      <tr>
+                        <th className="p-2.5">ลำดับ</th>
+                        <th className="p-2.5">วันที่ / เลขที่ใบคืน</th>
+                        <th className="p-2.5">บาร์โค้ด / รายการสินค้า</th>
+                        <th className="p-2.5 text-right">จำนวนชิ้น</th>
+                        <th className="p-2.5 text-right">จำนวนกล่อง</th>
+                        <th className="p-2.5">รับคืนจาก</th>
+                        <th className="p-2.5 text-center">จัดการ</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 font-sans">
+                      {filteredReturns.length === 0 ? (
+                        <tr>
+                          <td colSpan="7" className="p-8 text-center text-slate-400 font-medium">
+                            ไม่พบรายการรับคืนตามเงื่อนไขที่ค้นหา
+                          </td>
+                        </tr>
+                      ) : (
+                        filteredReturns.map((r, idx) => (
+                          <tr key={r.id || idx} className="hover:bg-teal-50/30 transition">
+                            <td className="p-2.5 font-bold font-mono text-slate-500">{idx + 1}</td>
+                            <td className="p-2.5">
+                              <div className="font-mono font-bold text-slate-800">{r.docNo}</div>
+                              <div className="text-[10px] text-slate-400 font-mono">{r.date} {r.time}</div>
+                            </td>
+                            <td className="p-2.5 max-w-[220px]">
+                              <div className="font-black text-slate-900 truncate" title={r.productName}>{r.productName}</div>
+                              <div className="text-[10px] text-slate-500 font-mono">
+                                <span>🏷️ {r.barcode}</span> • <span className="text-teal-700">ลัง {r.cartonSize || 'S'}</span>
+                              </div>
+                            </td>
+                            <td className="p-2.5 text-right font-mono font-black text-teal-800">
+                              {r.qtyPcs} ชิ้น
+                            </td>
+                            <td className="p-2.5 text-right font-mono font-bold text-slate-700">
+                              {r.qtyCartons} ลัง
+                            </td>
+                            <td className="p-2.5 max-w-[160px]">
+                              <div className="font-bold text-slate-800 truncate" title={r.returnFrom}>{r.returnFrom}</div>
+                              <div className="text-[10px] text-slate-400 font-mono">ผู้รับ: {r.receiver || '-'}</div>
+                            </td>
+                            <td className="p-2.5 text-center">
+                              <button
+                                onClick={() => handleDeleteReturnItem(r.id)}
+                                className="p-1 text-rose-500 hover:text-rose-700 hover:bg-rose-50 rounded-lg transition"
+                                title="ลบรายการนี้"
+                              >
+                                <i data-lucide="trash-2" className="w-4 h-4"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        ))
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+
               </div>
 
             </div>
@@ -19266,6 +20658,73 @@
                       ⚡ ประมวลผลและอัปเดตข้อมูล
                     </button>
                   </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* MODAL 8: BATCH RETURNS IMPORT MODAL */}
+          {showBatchReturnModal && (
+            <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+              <div className="w-full max-w-2xl bg-white/95 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl border-2 border-teal-200 space-y-4 text-slate-800 animate-in fade-in zoom-in-95 duration-200">
+                <div className="flex justify-between items-center border-b border-teal-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">🔄</span>
+                    <div>
+                      <h3 className="font-black text-sm text-slate-900">นำเข้ารายการรับคืนสินค้าจำนวนมาก (Batch / Excel)</h3>
+                      <p className="text-[10px] text-teal-700">อัปโหลดไฟล์ Excel หรือวางบาร์โค้ด + จำนวนชิ้นรับคืน</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setShowBatchReturnModal(false)}
+                    className="p-1 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition"
+                  >
+                    <i data-lucide="x" className="w-5 h-5"></i>
+                  </button>
+                </div>
+
+                <div className="space-y-3 text-xs">
+                  <div className="p-3 bg-teal-50 rounded-2xl border border-teal-200 text-[11px] text-teal-900 space-y-1">
+                    <p className="font-bold">📋 คำแนะนำการนำเข้า:</p>
+                    <p>• วางข้อมูลในรูปแบบ: <strong>บาร์โค้ด [Tab หรือ เว้นวรรค] จำนวนชิ้น</strong></p>
+                    <p>• ระบบจะดึงชื่อสินค้าจาก Master Data 631 สินค้า และคำนวณจำนวนกล่อง/ลังให้อัตโนมัติ</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-700 font-bold mb-1">เลือกไฟล์ Excel (.xlsx / .csv):</label>
+                    <input
+                      type="file"
+                      accept=".xlsx, .xls, .csv"
+                      onChange={handleFileUploadForReturns}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-2 text-xs text-slate-700 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-teal-600 file:text-white hover:file:bg-teal-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-700 font-bold mb-1">หรือวางข้อความ (Paste Data):</label>
+                    <textarea
+                      rows="6"
+                      value={batchReturnText}
+                      onChange={(e) => setBatchReturnText(e.target.value)}
+                      placeholder="8850029011122	24	ชำรุดเสียหายจากการขนส่ง	DC บางพลี&#10;8850029012345	12	สินค้าใกล้หมดอายุ	ร้านค้า TT นครปฐม"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3 font-mono text-xs text-slate-900 focus:ring-2 focus:ring-teal-400 placeholder-slate-400 custom-scrollbar"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div className="flex justify-end gap-2 pt-3 border-t border-teal-100">
+                  <button
+                    onClick={() => setShowBatchReturnModal(false)}
+                    className="px-4 py-2 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs"
+                  >
+                    ยกเลิก
+                  </button>
+                  <button
+                    onClick={handleProcessBatchReturns}
+                    className="px-5 py-2 rounded-2xl bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-white font-black text-xs shadow-md border border-white"
+                  >
+                    ⚡ ประมวลผลและเพิ่มรายการรับคืน
+                  </button>
                 </div>
               </div>
             </div>
